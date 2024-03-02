@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #add allauth urls
     path('accounts/',include("allauth.urls")), #urls for log in ,log out, reg ect
+    path('',include("home.urls")), 
 ]
