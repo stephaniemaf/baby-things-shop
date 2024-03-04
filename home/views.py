@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 def index (request):
     """ view to return undex page """
-    return render(request, "home/index.html")
+    return render(request, 'home/index.html')
