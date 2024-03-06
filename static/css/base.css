@@ -75,6 +75,10 @@ body {
     color: black;
 }
 
+a.hoover-cat > span.badge:hover {
+    background: rgb(23, 23, 23) !important;
+    color: #fff !important;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
