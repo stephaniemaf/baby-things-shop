@@ -48,8 +48,8 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'cloudinary',
-    'home',
     'products',
+    'home',
 ]
 
 MIDDLEWARE = [
