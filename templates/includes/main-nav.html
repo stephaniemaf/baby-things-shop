@@ -17,14 +17,14 @@
                 Clothing Things
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Boys 0-6</a>
-                <a href="" class="dropdown-item">Boys 6-12</a>
-                <a href="" class="dropdown-item">Girls 0-6</a>
-                <a href="" class="dropdown-item">Girls 6-12</a>
-                <a href="" class="dropdown-item">Swimwear</a>
-                <a href="" class="dropdown-item">Sleepsuits</a>
-                <a href="" class="dropdown-item">SleepBags</a>
-                <a href="" class="dropdown-item">All Clothing Things</a>
+                <a href="{% url 'products' %}?category=boys_0-6" class="dropdown-item">Boys 0-6</a>
+                <a href="{% url 'products' %}?category=boys_6-12" class="dropdown-item">Boys 6-12</a>
+                <a href="{% url 'products' %}?category=girls_0-6" class="dropdown-item">Girls 0-6</a>
+                <a href="{% url 'products' %}?category=girls_6-12" class="dropdown-item">Girls 6-12</a>
+                <a href="{% url 'products' %}?category=swimwear" class="dropdown-item">Swimwear</a>
+                <a href="{% url 'products' %}?category=sleepsuits" class="dropdown-item">Sleepsuits</a>
+                <a href="{% url 'products' %}?category=sleepbags" class="dropdown-item">SleepBags</a>
+                <a href="{% url 'products' %}?category=boys_0-6,boys6-12,girls_0-6,girls_6-12,swimwear,sleepsuits,sleppbags" class="dropdown-item">All Clothing Things</a>
             </div>
         </li>
 
@@ -33,11 +33,11 @@
                 Dinner Things
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="weaning-link">
-                <a href="" class="dropdown-item">Weaning Sets</a>
-                <a href="" class="dropdown-item">Plates &amp; Bowls</a>
-                <a href="" class="dropdown-item">Cutlery</a>
-                <a href="" class="dropdown-item">Bibs</a>
-                <a href="" class="dropdown-item">All Dinner Things</a>
+                <a href="{% url 'products' %}?category=weaning_sets" class="dropdown-item">Weaning Sets</a>
+                <a href="{% url 'products' %}?category=plates,bowls" class="dropdown-item">Plates &amp; Bowls</a>
+                <a href="{% url 'products' %}?category=cutlery" class="dropdown-item">Cutlery</a>
+                <a href="{% url 'products' %}?category=bibs" class="dropdown-item">Bibs</a>
+                <a href="{% url 'products' %}?category=weaing_sets,plates,bowls,cutlrey,bibs" class="dropdown-item">All Dinner Things</a>
             </div>
         </li>
 
@@ -46,10 +46,10 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'products' %}?category=clearence" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=new_arrivals,deals" class="dropdown-item">All Specials</a>
             </div>
         </li>
     </ul>
