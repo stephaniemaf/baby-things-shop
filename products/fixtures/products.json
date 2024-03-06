@@ -1,0 +1,1 @@
+[{"pk": 1, "model": "products.product", "fields": {"sku": "prod001", "name": "Blue baby gro with booties", "description": "This is a cute blue babygro vest with matching booties", "price": 14.99, "category": 6, "image_url": "https://t4.ftcdn.net/jpg/02/33/52/49/240_F_233524947_62GKvq9wx0ihbX06pKfHcIT9DAL2PIYL.jpg", "image": "boy_0-6.jpg"}}]
