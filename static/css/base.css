@@ -39,6 +39,12 @@ body {
     color: white;
 }
 
+.btn-outline-black {
+    background: white;
+    color: blank !important;
+    border: 1pxmsolid black;
+}
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
@@ -79,6 +85,23 @@ a.hoover-cat > span.badge:hover {
     background: rgb(23, 23, 23) !important;
     color: #fff !important;
 }
+
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
+}
+
+.cart-header{
+    padding-top: 50px;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -87,6 +110,7 @@ a.hoover-cat > span.badge:hover {
     max-width: 80%;
   }
 }
+
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {

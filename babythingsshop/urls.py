@@ -23,5 +23,6 @@ urlpatterns = [
     #add allauth urls
     path('accounts/',include("allauth.urls")), #urls for log in ,log out, reg ect
     path('',include("home.urls")), 
-    path('products/',include("products.urls")), 
+    path('products/',include("products.urls")),
+    path('bag/', include('bag.urls')), 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
