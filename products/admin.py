@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Product, Customer, Delivery , Order_history
+from .models import Category, Product, Customer, Delivery, Order_history
 
 
 class ProductAdmin(admin.ModelAdmin):
@@ -30,7 +30,7 @@ class DeliveryAdmin(admin.ModelAdmin):
     list_display = (
         'order',
         'address',
-        'deliver_date',
+        'delivery_date',
     )
 
 class Order_historyAdmin(admin.ModelAdmin):
