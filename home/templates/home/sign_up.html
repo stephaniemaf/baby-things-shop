@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+{% block content %}
+
+<form id="sign_up_form" class="signup" method="post" action="{% url account_signup %}"></form>
+    <h1>{% trans "Sign Up" %}</h1>
+
+    <div class="form-container">
+        <h2>{% trans 'Sign In' %}</h2>
+
+        <form id="sign_up_form" class="signup" method="post" action="{% url account_signup %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Sign Up</button>
+        
+    </div>
+</form>
+{% endblock %}

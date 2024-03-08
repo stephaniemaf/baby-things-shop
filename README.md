@@ -1,110 +1,90 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Introduction
 
-Welcome stephaniemaf,
+This is my project for E-commerce and it has ben creaded in Django! For this project i decided to do an online store that sells items for babies from 0-12. This store sells clothing and tableware for weaning babies onto solid food.The name of my store is called Baby Things!.
+There is an admin panel for Admin users the log in information for this will be found at the end of this ReadMe. Please scroll to the bottom of this page and you will see a heading for log information and first you wil see my git sign in informatuon and under that you will see the admin panel log in informatio.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The data base for my blog is hosted on [elephantsql](https://www.elephantsql.com/) 
+The site will be deployed threw [Hreoku](https://id.heroku.com/)
+Images stored on [cloudinary](https://cloudinary.com)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+# How to begin
+ When you first arrive on my website you will be on the home page. This page had a background image and a button saying shop now that will take you to the Products home page.On the home page of the store you will find a " nav-bar " at the top of the page with 4 links. These links are connected to different pages. The first link is All clothing where you can discover items for sale via links of - Price,Catagory and All Products. The second link is called Clothing and this has many options to select for example "boys 0-6, sleepsuits, and All Clothing", thirdly there is a link in the nav bar for Dinner things this is the link for cutlery plates and bowls and bibs. Finally we have the last link in the nav bar and this is the "Special offers" link. This will lead you to deals and new arrivals. Above the nav bar there is a search bar that you can type in to search the site this link withh accept key words in the description of the items as well as category names. To the right of that you will find a "My Account button this will allow you to either sign in or login and beside that again you have the shopping bag. The shopping bag will be updated as you add to bag and you can see the price and increment or decrement the quantity as needed." You are able to sign up as a registered user with a user name and an email confirmation will be sent to your email address you provided and you will need to verify this. This will also be send to the console on the ide of your choice for viewing the code from git.
 
-## Gitpod Reminders
+# Shopping bag functionality:
+When you click on the shopping bag you are brought to a seperate page. (*note in future versions i intendend to have this shopping bag as a pop up overlay on your current page so you are not redirected and it is easier to continue shopping.)
+So on this seperate page you will see alist of items you have purchased and the price of the item you can select a quantity for purchase. As you incremnet this function the total of your shoppinh bag will increase. You can also decrement your quantity and this will remove items from your cart and in turn the price will decrease. Then you will notice that there is a delivery fee that is calculated depending on the total in your cart.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Templates
 
-`python3 -m http.server`
+In the directories base.html is the main template and my other templates inherit from that 
+Index.html is the form that handles displaying my products. I have copied templates from a "<p>" and your not register for class or id. I have an sign-up form that enables users to sign up and this is linked to my email model so that in the admin oanel my cutomers emails are automatically added to my system. In futur versions i intend to work on this and add more information and have more details added to my admin panel.
 
-A blue button should appear to click: _Make Public_,
+## Authorisaton
 
-Another blue button should appear to click: _Open Browser_.
+djnago framworks have the ability to implement an admin feature on the backend, from here i can create read update and delete products and customer profiles fro my store . I have 5 models linked and they are Categories, Customers, Deliverys, Order_History and Products. I can also create a user name and password from this admin site. I can verify email address. On the admin panel there are roles and permissions. The abilty to create an admin and this person has the abily to preform all parts of crud on the site for each model. 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Login and Registration
 
-A blue button should appear to click: _Make Public_,
+Threw Django i implemented login/logout abiliies and the ability to register as a user for the site.  you are able to create a passowrd to log in. You are able to change your password aswell if you have fogotten it.
 
-Another blue button should appear to click: _Open Browser_.
+## Database management
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+In order to create models and store recipes and blog posts i used [elephantsql](https://www.elephantsql.com/). When creating updateing or deleting parts of the models you make migrations threw the terminal window and this will update the database on elephantsql. 
 
-To log into the Heroku toolbelt CLI:
+## CRUD
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+By logging into the admin panel The super user has the ability to preform full crud functionality my creating posts deleting them, updating usernames and passwords. 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Images
+My images are hosted on elephantsql
 
-------
+## Testing
 
-## Release History
+* I will be manually testing my Baby Things Store for this Project!
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+* To begin with i started testing the the Main page I began with the buttons! i tested each navigation button first by hoovering my mouse over it to see would my hopover function correctly work which i found it did! I then clicked each
+navigation button to be sure the links i created for the button would bring me to the correct page. They did. 
+after that i went to each nav button on all my pages to see would the link continuously work as intended! I tested Each nav button for a drop down bos which was succesful i then manually clocked each button to ensure that i was brought to the correct page i intend for suers to go to. In the beginning of the project i noticed that if i was logged out of the admin panel then i was unable to access the store entirely. In the end it was a spelling error of the top pagenav header,html page for the accounts.signup link, once i corrected this there was no issues for signing in and out of the store either logged in or out from the admin panel.
 
-**September 20 2023:** Update Python version to 3.9.17.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+* Next i moved on to the blog page. I clicked into my first blog** as if i were a user I ecpected this to bring me into a page with the contect of the blog i clicked the reuslt was as intended and i was indeed brought to the content i was expecting to see. I then went to my like function to click that to see would it work and it did then i moved down to the comment section i left a comment as my logged in user which i then went to the admin page and approved the comment and when i returned to the blog post my comment was there!
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+I did the same on my recipe model was able to leave a comment. When i creatred the seperate page for recipes i uploaded a blog post to the site and made sure that it only posted to the recipe page and it did.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+* To test the log in feature i created a sudonom and logged into the site as sarah she was ablel to register and create a passwprd i then went and tried to change her password and was successful
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+* To comment on the site i used sarahs accound and left a comment iI then logged in as my admin user and approved the comment. Initially the option to approve wasnt there and i had made an error with my comment model i went back and changed the model and then was able to approve sarahs comment 
+![sarah](images/sarah.png)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+# bugs
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+I wanted to implement the ability to edit and delete comments the user had made on the blogposts and recipes but after impletmenting the code from the [django documentation](https://docs.djangoproject.com/en/5.0/) but i could not get this to work for me just yet i will contu=inue in my efforts to perfect this.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+# Validator Testing
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Tested on [Validator](https://pep8ci.herokuapp.com/)
+Code passed through validator with no issues
+![val](images/val.png)
+![val1](images/val1.png)
+![val2](images/val2.png)
+![val3](images/val3.png)
+![val4](images/val4.png)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+# Credits 
+I took ideas for this project from the code institute walkthrough project Ado. 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+# Important links
+Link to my GitHup repository
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+# log in information
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+GIT log in: Stephaniemaf
+passoword: AvaAlex1@
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+To get onto admin site 
+Name: admin
+Password: project5
 
-------
 
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+hosted on heroku

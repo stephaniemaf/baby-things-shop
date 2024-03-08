@@ -113,6 +113,49 @@ a.hoover-cat > span.badge:hover {
 .cart-header{
     padding-top: 50px;
 }
+
+.email{
+    color: #000;
+}
+
+.signup{
+    color: black;
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #a7a1a1;
+    border: 1px solid black;
+    border-radius: 5px;
+    
+}
+
+.signup button {
+    background-color: black;
+    color: white;
+    border: 50%;
+    height: 5%;
+    min-width: auto;
+    padding: 10px 24px;;
+    width: 30%;
+    text-align: center;
+}
+
+h1{
+    color: black;
+    text-align: center;
+    padding-top: 80px;
+}
+
+p{
+    color: black;
+    text-align: center;
+}
+
+.form-container h2 {
+    color: #000 !important; /* Change the color to black */
+    margin-bottom: 20px;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -132,7 +175,7 @@ a.hoover-cat > span.badge:hover {
         left: 0;
         z-index: 1030;
     }
-
+    
     .header-container {
         padding-top: 164px;
     }
