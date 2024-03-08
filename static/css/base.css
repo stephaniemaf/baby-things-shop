@@ -95,9 +95,20 @@ a.hoover-cat > span.badge:hover {
     right: 10px;
 }
 
-.btt-link {
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
+
 
 .cart-header{
     padding-top: 50px;

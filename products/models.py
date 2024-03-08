@@ -1,6 +1,8 @@
 from django.db import models
 
 
+STATUS = ((0, "ordered"), (1, "delivered"))
+
 class Category(models.Model):
 
     class Meta:
@@ -28,3 +30,34 @@ class Product(models.Model):
 
     def __str__(self):
        return self.name
+
+class Order_history(models.Model):
+    name = models.ForeignKey (on_delete=models.SET_NULL)
+    address = models.TextField(max_length=254, null=True, blank=True)
+    email = models.EmailField(max_length=254)
+    order_total = models.DecimalField(max_digits=6, decimal_places=2)
+    order_date = models.DateTimeField(auto_now_add=True)
+    quantity - models.PositiveIntergerField()
+    status = models.IntegerField(choices=STATUS, default=0)
+
+    def __str__(self):
+       return self.name
+
+class Customer(models.Model):
+    name = models.ForeignKey (on_delete=models.SET_NULL)
+    address = models.TextField(max_length=254, null=True, blank=True)
+    email = models.EmailField(max_length=254)
+    
+    def __str__(self):
+       return self.name
+
+class delivery(models.Model):
+    order = models.ForeignKey('Order', on_delete=models.CASCADE)
+    address = models.CharField(max_length=255)
+    delivery_date = models.DateField()
+    is_paid = models.BooleanField(default=False)
+    status = models.CharField(max_length=50)
+
+    def __str__(self):
+        return f"Delivery {self.id} for Order #{self.order_id}"
+
