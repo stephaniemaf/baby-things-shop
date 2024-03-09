@@ -10,12 +10,14 @@ def sign_up(request):
     if request.method == 'POST':
         form = Sign_Up(request.POST)
         if form.is_valid():
+            form.save()
             username = form.cleaned_data['username']
             email = form.cleaned_data['email']
             password = form.cleaned_data['password']
-            # Process the form data (e.g., create a new user)
-            return redirect('')  # Redirect to the home page after successful sign-up
+            return redirect('home') 
     else:
         form = Sign_Up()
     return render(request, 'home/sign_up.html', {'form': form})
+
+
 

@@ -5,4 +5,4 @@ class Sign_Up(forms.ModelForm):
     class Meta:
         model = Customer
 
-        fields = ['name', 'email', 'password']
+        fields = ['name', 'email', 'password','address']
