@@ -1,7 +1,6 @@
 
 from django.shortcuts import render, redirect, reverse
 
-# Create your views here.
 
 def shop_bag(request):
     """ view to return undex page """
