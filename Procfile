@@ -1,1 +1,1 @@
-web: gunicorn baby-things-shop.wsgi --log-file -
+web: gunicorn babythingsshop.wsgi
