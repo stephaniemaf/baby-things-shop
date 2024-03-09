@@ -124,6 +124,18 @@ a.hoover-cat > span.badge:hover {
     background: rgb(23, 23, 23) !important;
     color: #fff !important;
 }
+.signin{
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.signin-btn{
+    background: rgb(23, 23, 23) !important;
+    color: #fff !important;
+    text-align: center;
+}
+
 
 p{
     color: #000;
@@ -135,6 +147,7 @@ h1{
     color: #000;
     font-weight: 200;
     text-align: center;
+    padding-top: 80px;
 }
 /* -------------------------------- Media Queries */
 

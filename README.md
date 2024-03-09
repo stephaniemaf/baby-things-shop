@@ -47,14 +47,22 @@ navigation button to be sure the links i created for the button would bring me t
 after that i went to each nav button on all my pages to see would the link continuously work as intended! I tested Each nav button for a drop down bos which was succesful i then manually clocked each button to ensure that i was brought to the correct page i intend for suers to go to. In the beginning of the project i noticed that if i was logged out of the admin panel then i was unable to access the store entirely. In the end it was a spelling error of the top pagenav header,html page for the accounts.signup link, once i corrected this there was no issues for signing in and out of the store either logged in or out from the admin panel.
 
 
-* Next i moved on to the blog page. I clicked into my first blog** as if i were a user I ecpected this to bring me into a page with the contect of the blog i clicked the reuslt was as intended and i was indeed brought to the content i was expecting to see. I then went to my like function to click that to see would it work and it did then i moved down to the comment section i left a comment as my logged in user which i then went to the admin page and approved the comment and when i returned to the blog post my comment was there!
+* Next i moved on to the sign up page. I ecpected this to bring me into a page with the content of the sign up form i clicked and  the reuslt was as intended and i was indeed brought to the content i was expecting to see. Howevr my form was not styled as i wanted so i spent some time creating css to no avail i cpuldnt get the stles to work. I went back to my form and realised that i needed to copy allauth files into seperate folders in order to over ride it and be able to stle as i wanted. This then worked and i was able to stle my form.
+* To test the log in feature i created a sudonom and logged into the site as a random user, i was able to register and create a password i then went and tried to change her password and was successful.I had to log into the admin panel to verify the email address and then after this i was logged in as a user. I thing entered admin again in the search bar to see was my normal user indeed unable to log in as the super user i had created. This went as expected and i wass warned though i was indeed a registered user of the website i was blocked from entering the admin panel.
+* I thenwent onto the admin panel into the model section i created to test was i abloe to manually enter all the field provdied i clicked on each model name and filled in the required fields and this was successful i was able to load information manually. Unfortunatly at the time of submitting this project i am unable to automaticaqlly load the information whivh i intent to have functioning in the fututre i again underestimasted the scope of what was invovled in this project and found i didnt preform to the nest of my ability and i will implement the features needed soon.
 
-I did the same on my recipe model was able to leave a comment. When i creatred the seperate page for recipes i uploaded a blog post to the site and made sure that it only posted to the recipe page and it did.
+## Facebook business page
+[Facbook](https://www.facebook.com/profile.php?id=61557082624595)
+![fbbus](media/fbbus.png)
+![fbbus1](media/fbbus1.png)
 
-* To test the log in feature i created a sudonom and logged into the site as sarah she was ablel to register and create a passwprd i then went and tried to change her password and was successful
 
-* To comment on the site i used sarahs accound and left a comment iI then logged in as my admin user and approved the comment. Initially the option to approve wasnt there and i had made an error with my comment model i went back and changed the model and then was able to approve sarahs comment 
-![sarah](images/sarah.png)
+
+## Tested on [Validator](https://pep8ci.herokuapp.com/)
+Code passed through validator with no issues
+![val](image.png)
+![val1](media/val1.png)
+![val2](media/val2.png)
 
 # bugs
 
