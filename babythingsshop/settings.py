@@ -28,11 +28,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['baby-things-shop-5ef2702b155d.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['8000-stephaniema-babythingss-pbyhc8zlo4q.ws-eu110.gitpod.io', 'localhost']
 
 
 # Application definition

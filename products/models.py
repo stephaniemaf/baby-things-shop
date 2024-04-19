@@ -44,6 +44,8 @@ class Order_history(models.Model):
     
     customer = models.ForeignKey(
         Customer, on_delete=models.SET_NULL, null=True, blank=True, default=None)
+    product = models.ForeignKey(
+        Product, on_delete=models.SET_NULL, null=True, blank=True, default=None)
     name = models.CharField(max_length=254, null=True, blank=True)
     id = models.AutoField(primary_key=True)
     address = models.TextField(max_length=254, null=True, blank=True)
@@ -60,6 +62,7 @@ class Delivery(models.Model):
     order = models.ForeignKey(
         User, null=True, blank=True, on_delete=models.SET_NULL)
     id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=254, null=True, blank=True)
     address = models.CharField(max_length=255)
     delivery_date = models.DateField()
     is_paid = models.BooleanField(default=False)
