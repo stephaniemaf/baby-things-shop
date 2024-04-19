@@ -28,7 +28,8 @@ class CustomerAdmin(admin.ModelAdmin):
 
 class DeliveryAdmin(admin.ModelAdmin):
     list_display = (
-        'order',
+        'name',
+
         'address',
         'delivery_date',
     )
@@ -37,6 +38,7 @@ class Order_historyAdmin(admin.ModelAdmin):
     list_display = (
         'name',
         'address',
+        'product',
         'email',
         'order_total',
         'order_date',
