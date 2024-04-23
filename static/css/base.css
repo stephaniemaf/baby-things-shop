@@ -65,13 +65,15 @@ body {
 
 .overlay {
     height: 100%;
-    width: 100%;
+    width: 50%;
     top: 0;
     left: 0;
     position: fixed;
     background: white;
     z-index: -1;
 }
+
+
 
 .my-0 {
     color: black;
