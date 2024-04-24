@@ -3,13 +3,27 @@ html {
 }
 
 body {
-    background: url('media/main-page-bg.jpg') no-repeat center center fixed;
+    background: no-repeat center center fixed;
     padding-top: 80px;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Nanum Myeongjo';
 }
+
+.image-main-bg{
+    position: relative;
+    
+}
+
+.overlay-home{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+
+
 
 /* from Bulma */
 .icon {
