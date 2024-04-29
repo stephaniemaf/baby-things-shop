@@ -32,7 +32,7 @@ DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['8000-stephaniema-babythingss-pbyhc8zlo4q.ws-eu110.gitpod.io', 'localhost']
+ALLOWED_HOSTS = ['8000-stephaniema-babythingss-6x6o2efmvid.ws-eu110.gitpod.io', 'localhost']
 
 
 # Application definition
@@ -185,6 +185,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 FREE_DELIVERY_THRESHOLD = 50
 STARNDARD_DELIVERY_PERCENTAGE = 10 
+STRIPE_CURRENCY = 'usd'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
