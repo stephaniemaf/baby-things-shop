@@ -13,7 +13,7 @@ var style = {
         }
     },
     invalid: {
-        color: '#dc3545',
+        color: '#dc3545',   
         iconColor: '#dc3545'
     }
 };
@@ -45,6 +45,8 @@ form.addEventListener('submit', function(ev) {
     ev.preventDefault();
     card.update({ 'disabled': true}); //prevent multiple submissioms
     $('#submit-button').attr('disabled', true);
+    $('#payment-form').fadeToggle(100);
+    $('#loading-overlay').fadeToggle(100);
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
             card: card,
