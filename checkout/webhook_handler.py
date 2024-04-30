@@ -32,7 +32,7 @@ class StripeWH_Handler:
         grand_total = round(stripe_charge.amount / 100, 2) # updated
 
         for field, value in shipping_details.address.items():
-            if value =="":
+            if value == "":
                 shipping_details.address[field] = None
 
         order_exists = False
@@ -88,14 +88,18 @@ class StripeWH_Handler:
                         )
                         order_line_item.save()
                     else:
-                        for size, quantity in item_data['items_by_size'].items():
+                        quantity = item_data.get('quantity')
+                        if quantity is not None:
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
                                 quantity=quantity,
-                                product_size=size,
                             )
                             order_line_item.save()
+                        else:
+                            message.error(request, "item data is unavailable. Please call us.")
+                            order.delete()
+                            return redirect(reverse('shop_bag'))
             except Exception as e:
                 if order:
                     order.delete()
