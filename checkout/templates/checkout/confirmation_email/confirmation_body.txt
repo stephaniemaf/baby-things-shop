@@ -1,0 +1,8 @@
+Hi, {{order.full_name}}!
+
+This is a confirmation of your order.
+
+Order Number: {{order.order_number}}
+Order Date: {{order.Order_date}}
+
+Thanks
