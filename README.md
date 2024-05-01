@@ -61,9 +61,27 @@ Expectation = I expect the footer to have the words Made by stephanie and links 
 Result = I clicked on each link and am brought to the front page of their respective sites.
 
 ### Shopping Bag
-Expectation: I expected this to bring me into a page with the content of the shopping bag. sign up form i clicked  theon the bag and was shown an attribute error saying that reuslt was as intended and i was indeed brought to the content i was expecting to see. Howevr my form was not styled as i wanted so i spent some time creating css to no avail i cpuldnt get the stles to work. I went back to my form and realised that i needed to copy allauth files into seperate folders in order to over ride it and be able to stle as i wanted. This then worked and i was able to stle my form.
-* To test the log in feature i created a sudonom and logged into the site as a random user, i was able to register and create a password i then went and tried to change her password and was successful.I had to log into the admin panel to verify the email address and then after this i was logged in as a user. I thing entered admin again in the search bar to see was my normal user indeed unable to log in as the super user i had created. This went as expected and i wass warned though i was indeed a registered user of the website i was blocked from entering the admin panel.
-* I thenwent onto the admin panel into the model section i created to test was i abloe to manually enter all the field provdied i clicked on each model name and filled in the required fields and this was successful i was able to load information manually. Unfortunatly at the time of submitting this project i am unable to automaticaqlly load the information whivh i intent to have functioning in the fututre i again underestimasted the scope of what was invovled in this project and found i didnt preform to the nest of my ability and i will implement the features needed soon.
+Expectation: I expected this to bring me into a page with the content of the shopping bag. sign up form i clicked  theon the bag and was shown an attribute error saying that reuslt was as intended and i was indeed brought to the content i was expecting to see. 
+
+# Product Testing
+
+## View Product
+Expectation: I will click on a Sleepbags in the Clothing things drop down menu to test this feature. I expected to be brought to the Sleeping bag item page. <br>
+I was brought To the oage with the image i had chosen to represent my sleepbags
+Fix: No fix needed as i was indeed brought to the correct page. I was shown the product image of a sleep bag and i had the option to add it to my cart or keep shopping.
+
+## Add Product
+Expectation: I will be logged in as admin and i will select the My Account option on the nav bar. I will be shown a menu item called Product management. Here a form will be present and i will be able to fill in the fields with my new image. To test this i chose to ass a silicone bowl to my site. I filled in all the required fields and clicked on the add button. To text if this worked i clicked on the search bar above and typed the word Silicone. This then brought me to a product page with the item image of a silicone bowl with the clearnce tag i chose to save it under and it had a price that i chose aswell.
+Fix: This test was successful
+
+## Edit Product
+Expectation: I will select the newly added silicone bowl and i will edit the price to 1.99
+Fix:
+
+
+## Delete Product
+Expectation: I will again use the silicone bowl and i will click on the delete button i created and i expect the product to be deleted from my site.
+Fix:
 
 ## Facebook business page
 [Facbook](https://www.facebook.com/profile.php?id=61557082624595)
