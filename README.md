@@ -40,14 +40,28 @@ My images are hosted on elephantsql
 
 ## Testing
 
-* I will be manually testing my Baby Things Store for this Project!
+I will be manually testing my Baby Things Store for this Project!
 
-* To begin with i started testing the the Main page I began with the buttons! i tested each navigation button first by hoovering my mouse over it to see would my hopover function correctly work which i found it did! I then clicked each
-navigation button to be sure the links i created for the button would bring me to the correct page. They did. 
-after that i went to each nav button on all my pages to see would the link continuously work as intended! I tested Each nav button for a drop down bos which was succesful i then manually clocked each button to ensure that i was brought to the correct page i intend for suers to go to. In the beginning of the project i noticed that if i was logged out of the admin panel then i was unable to access the store entirely. In the end it was a spelling error of the top pagenav header,html page for the accounts.signup link, once i corrected this there was no issues for signing in and out of the store either logged in or out from the admin panel.
+## Home Page
+ ### Navbar: <br>
+ I tested each navigation button first by hoovering my mouse over it to see would my hoover function correctly work which i found it did! I then clicked each navigation button to be sure the links i created for the button would trigger a drop down menu <br>
+ I clicked on All Things. This immediatly threw an error at me. If i was logged out of the admin panel then i was unable to access the store entirely. The error was showing the pagenav.html as causing the error. I went threw the code and noticed it was a spelling error at the top pagenav header html page for the accounts.signup link, once i corrected this there was no issues for signing in and out of the store either logged in or out from the admin panel. I went back to the home page and tried the All Things link again This dropped a menu down containing all expected options for product pages.<br>
+ I clicked on Clothing Things Things. This dropped a menu down containing all expected options for product pages.<br>
+ I clicked on Dinner Things. This dropped a menu down containing all expected options for product pages.<br>
+ I clicked on Specials Offers. This dropped a menu down containing all expected options for product pages.<br>
+ I clicked on My Account. This dropped a menu down containing all expected options.<br>
+ I clicked on the Shopping bag. This brought me to a knew page with the options to go back or continue to checkout. As i had no items in my bag to view thats all that was on the page and what i expected to see.<br>
+ I clicked on the Search bar. I wanted to be able to type in this bar and have it find the product im looking for via product name or part there of, or via item heading. it did work and i was brought to the item page i was searching for<br>
+ ### Middle Container
+ The container has a background image with text overlay. This is centered and stretched to fit the whole screen but have padding at the edges.
+I clicked on the shop noew button contained on this page and under the text informing customers of New Arrivals. This brought me to a new page with all the lasted items added to the store contained in it. This test passed like i expected.
 
+### The Footer:
+Expectation = I expect the footer to have the words Made by stephanie and links to facebook and instagram. I want these links to lead to the home page of their respective sites.
+Result = I clicked on each link and am brought to the front page of their respective sites.
 
-* Next i moved on to the sign up page. I ecpected this to bring me into a page with the content of the sign up form i clicked and  the reuslt was as intended and i was indeed brought to the content i was expecting to see. Howevr my form was not styled as i wanted so i spent some time creating css to no avail i cpuldnt get the stles to work. I went back to my form and realised that i needed to copy allauth files into seperate folders in order to over ride it and be able to stle as i wanted. This then worked and i was able to stle my form.
+### Shopping Bag
+Expectation: I expected this to bring me into a page with the content of the shopping bag. sign up form i clicked  theon the bag and was shown an attribute error saying that reuslt was as intended and i was indeed brought to the content i was expecting to see. Howevr my form was not styled as i wanted so i spent some time creating css to no avail i cpuldnt get the stles to work. I went back to my form and realised that i needed to copy allauth files into seperate folders in order to over ride it and be able to stle as i wanted. This then worked and i was able to stle my form.
 * To test the log in feature i created a sudonom and logged into the site as a random user, i was able to register and create a password i then went and tried to change her password and was successful.I had to log into the admin panel to verify the email address and then after this i was logged in as a user. I thing entered admin again in the search bar to see was my normal user indeed unable to log in as the super user i had created. This went as expected and i wass warned though i was indeed a registered user of the website i was blocked from entering the admin panel.
 * I thenwent onto the admin panel into the model section i created to test was i abloe to manually enter all the field provdied i clicked on each model name and filled in the required fields and this was successful i was able to load information manually. Unfortunatly at the time of submitting this project i am unable to automaticaqlly load the information whivh i intent to have functioning in the fututre i again underestimasted the scope of what was invovled in this project and found i didnt preform to the nest of my ability and i will implement the features needed soon.
 

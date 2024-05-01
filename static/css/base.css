@@ -164,6 +164,12 @@ h1{
     text-align: center;
     padding-top: 80px;
 }
+/* footer */
+.dark-bg {
+    background-color: #12485f;
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
