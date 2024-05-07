@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Order, OrderLineItem
+from .models import Order, OrderLineItem, Customer
 
 # Register your models here.
 
@@ -29,4 +29,14 @@ class OrderAdmin(admin.ModelAdmin):
 
     ordering = ('-date',)
 
+
+class CustomerAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'phone_number',
+        'email',
+    )
+    earch_fields = ['name', 'phone_number', 'email']
+
+admin.site.register(Customer, CustomerAdmin)
 admin.site.register(Order, OrderAdmin)

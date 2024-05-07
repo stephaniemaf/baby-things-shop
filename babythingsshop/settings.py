@@ -32,7 +32,7 @@ DEBUG = 'True'
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['8000-stephaniema-babythingss-scpb7i3lzwv.ws-eu110.gitpod.io', 'localhost']
+ALLOWED_HOSTS = ['8000-stephaniema-babythingss-scpb7i3lzwv.ws-eu111.gitpod.io', 'localhost']
 
 
 # Application definition

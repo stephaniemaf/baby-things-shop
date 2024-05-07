@@ -1,14 +1,15 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
+from django.urls import reverse_lazy
 from django.contrib import messages
+from django.views.generic.edit import FormView
 from django.conf import settings
-
-from .forms import OrderForm
-from .models import Order, OrderLineItem
+from .models import Order, OrderLineItem, Customer
 from products.models import Product
-from bag.contexts import bag_contents
+from .forms import OrderForm, CustomerForm
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
+from bag.contexts import bag_contents
 
 import stripe
 import json
@@ -48,12 +49,25 @@ def checkout(request):
             'county': request.POST['county'],
         }
         order_form = OrderForm(form_data)
+
         if order_form.is_valid():
+            full_name = order_form.cleaned_data['full_name']
+            email = order_form.cleaned_data['email']
+            phone_number = order_form.cleaned_data['phone_number']
+
+            customer = Customer.objects.create(
+                name=full_name,
+                email=email,
+                phone_number=phone_number,
+                
+            )
+
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
             order.save()
+
             for item_id, item_data in bag.items():
                 try:
                     product = Product.objects.get(id=item_id)
@@ -178,3 +192,24 @@ def checkout_success(request, order_number):
     }
 
     return render(request, template, context)
+
+def customer_details(request):
+    if request.method == 'POST':
+        customer_form = CustomerForm(request.POST)
+        if customer_form.is_valid():
+            customer_form.save()
+            return redirect('checkout_success') 
+        else:
+            context = {
+            'customer_form': customer_form,
+            }
+            return render(request, 'customer_details.html', context)
+    else:
+        customer_form = CustomerForm()
+        context = {
+            'customer_form': customer_form,
+        }
+        return render(request, 'customer_details.html', context)
+        
+
+    

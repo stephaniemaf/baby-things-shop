@@ -33,18 +33,11 @@ class Product(models.Model):
     def __str__(self):
        return self.name
 
-class Customer(models.Model):
-    name = models.CharField(max_length=254, null=True, blank=True)
-    address = models.TextField(max_length=254, null=True, blank=True)
-    email = models.EmailField(max_length=254)
-    
-    def __str__(self):
-       return self.name
 
 class Order_history(models.Model):
     
     customer = models.ForeignKey(
-        Customer, on_delete=models.SET_NULL, null=True, blank=True, default=None)
+        User, on_delete=models.SET_NULL, null=True, blank=True, default=None)
     product = models.ForeignKey(
         Product, on_delete=models.SET_NULL, null=True, blank=True, default=None)
     name = models.CharField(max_length=254, null=True, blank=True)

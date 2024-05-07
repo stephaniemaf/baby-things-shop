@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from .views import customer_details
 from .webhooks import webhook
 
 urlpatterns = [
