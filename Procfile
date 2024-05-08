@@ -1,1 +1,1 @@
-web: gunicorn babythingsshop.wsgi
+web: gunicorn babythingsshop.wsgi:application
