@@ -6,13 +6,15 @@ from django.views.generic.edit import FormView
 from django.conf import settings
 from .models import Order, OrderLineItem, Customer
 from products.models import Product
+from profiles.models import Delivery
 from .forms import OrderForm, CustomerForm
-from profiles.forms import UserProfileForm
+from profiles.forms import UserProfileForm, DeliveryForm
 from profiles.models import UserProfile
 from bag.contexts import bag_contents
-
 import stripe
 import json
+from datetime import datetime
+
 
 @require_POST
 def cache_checkout_data(request):
@@ -29,6 +31,7 @@ def cache_checkout_data(request):
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
+
 
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
@@ -51,15 +54,43 @@ def checkout(request):
         order_form = OrderForm(form_data)
 
         if order_form.is_valid():
+            order_date = datetime.now().date()
+            #save infro to customer model on admin panel
             full_name = order_form.cleaned_data['full_name']
             email = order_form.cleaned_data['email']
             phone_number = order_form.cleaned_data['phone_number']
 
-            customer = Customer.objects.create(
-                name=full_name,
-                email=email,
-                phone_number=phone_number,
+            return_customer = Customer.objects.filter(email=email).first()
+
+            if return_customer:
+                customer = return_customer
+            else:
+                customer = Customer.objects.create(
+                    name=full_name,
+                    email=email,
+                    phone_number=phone_number,
                 
+            )
+            full_name = order_form.cleaned_data['full_name']
+            phone_number = order_form.cleaned_data['phone_number']
+            street_address1 = order_form.cleaned_data['street_address1']
+            town_or_city = order_form.cleaned_data['town_or_city']
+            county = order_form.cleaned_data['county']
+            country = order_form.cleaned_data['country']
+            postcode = order_form.cleaned_data['postcode']
+            
+            user = request.user
+            delivery = Delivery.objects.create(
+                name = full_name,
+                order=user,
+                order_date=order_date,
+                phone_number=phone_number,
+                street_address1=street_address1,
+                town_or_city=town_or_city,
+                county =county, 
+                country=country,
+                postcode=postcode,
+                is_paid = True
             )
 
             order = order_form.save(commit=False)

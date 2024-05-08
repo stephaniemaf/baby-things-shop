@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Product, Delivery, Order_history
+from .models import Category, Product
 
 
 class ProductAdmin(admin.ModelAdmin):
@@ -20,28 +20,8 @@ class CategoryAdmin(admin.ModelAdmin):
     )
 
 
-class DeliveryAdmin(admin.ModelAdmin):
-    list_display = (
-        'name',
-
-        'address',
-        'delivery_date',
-    )
-
-class Order_historyAdmin(admin.ModelAdmin):
-    list_display = (
-        'name',
-        'address',
-        'product',
-        'email',
-        'order_total',
-        'order_date',
-        'quantity',
-    )
-
 
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Product, ProductAdmin)
-admin.site.register(Delivery, DeliveryAdmin)
-admin.site.register(Order_history, Order_historyAdmin)
+
 
