@@ -139,6 +139,7 @@ a.hoover-cat > span.badge:hover {
     color: black;
     font-weight: bold;
     text-align: center;
+    margin-top: 20px;
 }
 
 .signup button{
