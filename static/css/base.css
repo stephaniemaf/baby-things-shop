@@ -11,6 +11,12 @@ body {
     font-family: 'Nanum Myeongjo';
 }
 
+.form-group{
+    margin-bottom: 20px;
+}
+
+
+
 /* home page */
 .image-main-bg{
     position: relative;

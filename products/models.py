@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from django.contrib.contenttypes.models import ContentType
 
 class Category(models.Model):
 
@@ -30,5 +30,21 @@ class Product(models.Model):
 
     def __str__(self):
        return self.name
+
+class Review(models.Model):
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name='reviews',null=True, blank=True)
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE, null=True, blank=True)
+    name = models.CharField(max_length=80 ,null=True, blank=True)
+    body = models.TextField()
+    pub_date = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+    
+
+    class Meta:
+        ordering = ["pub_date"]
+    
+    def __str__(self):
+        return f"Review {self.body} by {self.name}"
 
 

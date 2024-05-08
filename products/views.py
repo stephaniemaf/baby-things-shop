@@ -1,12 +1,13 @@
 from django.shortcuts import render, redirect,reverse,get_object_or_404
 from django.contrib import messages
-
+from django.views.generic import View
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from django.urls import reverse_lazy
-from .models import Product, Category
-from .forms import ProductForm
+from .models import Product, Category, Review
+from .forms import ProductForm, ReviewForm
+from django.contrib.contenttypes.models import ContentType
 
 
 # Create your views here.
@@ -66,10 +67,26 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    reviews = product.reviews.filter(approved=True).order_by("-pub_date")
+    review_form = ReviewForm()
 
     context = {
         'product': product,
+        'reviews': reviews,
+        'review_form': review_form,
     }
+
+    if request.method == 'POST':
+        review_form = ReviewForm(request.POST)
+        if review_form.is_valid():
+            review = review_form.save(commit=False)
+            review.name = request.user.username
+            review.product = product
+            review.save()
+            return redirect('product_detail', product_id=product_id)
+        else:
+            context['review_form'] = review_form
+            context['reviewed'] = True
 
     return render(request, 'products/product_detail.html', context)
     
@@ -140,4 +157,3 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
-

@@ -43,7 +43,7 @@ class Delivery(models.Model):
     postcode = models.CharField(max_length=20, null=True, blank=True)
     order_date = models.DateField(null=True)
     is_paid = models.BooleanField(default=False)
-    status = models.IntegerField(choices=STATUS, null=True)
+    status = models.IntegerField(choices=STATUS, null=True, default=0)
 
     def __str__(self):
         return f"Delivery {self.id} for Order #{self.order_id}"

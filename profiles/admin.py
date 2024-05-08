@@ -7,6 +7,7 @@ class DeliveryAdmin(admin.ModelAdmin):
         'id',
         'name',
         'order',
+        'status',
         'order_date',
         'is_paid',
     )

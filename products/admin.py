@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Product
+from .models import Category, Product, Review
 
 
 class ProductAdmin(admin.ModelAdmin):
@@ -19,9 +19,22 @@ class CategoryAdmin(admin.ModelAdmin):
         'name',
     )
 
+class ReviewAdmin(admin.ModelAdmin):
+
+    list_filter = ('approved', 'pub_date')
+    list_display = ('body', 'approved', 'pub_date','content_type')
+    search_fields = ('name','body')
+    actions = ['approve_comments']
+
+    def content_type(self, obj):
+        content_type.short_description = 'Content Type'
+    
+    def approve_comments(self, request, queryset):
+        queryset.update(approved=True)
+
 
 
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Product, ProductAdmin)
-
+admin.site.register(Review, ReviewAdmin)
 
