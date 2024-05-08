@@ -32,7 +32,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['baby-things-shop-5ef2702b155d.herokuapp.com', '8000-stephaniema-babythingss-scpb7i3lzwv.ws-eu111.gitpod.io', 'localhost']
+ALLOWED_HOSTS = ['baby-things-shop-5ef2702b155d.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -184,7 +184,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/ 
 
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_STORAGE = ''
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
