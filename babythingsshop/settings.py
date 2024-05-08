@@ -28,11 +28,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'False' 
+DEBUG = 'DEVELOPMENT' in os.environ 
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['baby-things-shop-5ef2702b155d.herokuapp.com','8000-stephaniema-babythingss-scpb7i3lzwv.ws-eu111.gitpod.io', 'localhost']
+ALLOWED_HOSTS = ['baby-things-shop-5ef2702b155d.herokuapp.com', '8000-stephaniema-babythingss-scpb7i3lzwv.ws-eu111.gitpod.io', 'localhost']
 
 
 # Application definition
@@ -134,9 +134,17 @@ WSGI_APPLICATION = 'babythingsshop.wsgi.application'
 #}
 #}
 
-DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-}
+if 'DEVELOPMENT' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    }
+else:
+    DATABASES = {
+        'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }    
 
   
 # Password validation
