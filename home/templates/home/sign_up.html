@@ -19,7 +19,7 @@
             <form id="sign_in_form" class="signin" method="post" action="{% url account_login %}">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button type="submits" class="signin-btn" >Sign In</button>
+                <button type="submit" class="signin-btn" >Sign In</button>
             </form>
         </div>
     </div>
