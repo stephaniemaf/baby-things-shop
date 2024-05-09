@@ -85,30 +85,20 @@ Fix:
 
 ## Facebook business page
 [Facbook](https://www.facebook.com/profile.php?id=61557082624595)
-![fbbus](media/fbbus.png)
-![fbbus1](media/fbbus1.png)
-
-
-
-## Tested on [Validator](https://pep8ci.herokuapp.com/)
-Code passed through validator with no issues
-![val](image.png)
-![val1](media/val1.png)
-![val2](media/val2.png)
-
-# bugs
-
-I wanted to implement the ability to edit and delete comments the user had made on the blogposts and recipes but after impletmenting the code from the [django documentation](https://docs.djangoproject.com/en/5.0/) but i could not get this to work for me just yet i will contu=inue in my efforts to perfect this.
+![fbbus](static/images/fbbus.png)
+![fbbus1](static/images/fbbus1.png)
 
 # Validator Testing
 
 ## Tested on [Validator](https://pep8ci.herokuapp.com/)
 Code passed through validator with no issues
-![val](images/val.png)
-![val1](images/val1.png)
-![val2](images/val2.png)
-![val3](images/val3.png)
-![val4](images/val4.png)
+![val](static/images/.png)
+![val1](static/images/val1.png)
+![val2](static/images/val2.png)
+
+# bugs
+
+I wanted to implement the ability to edit and delete comments the user had made on the blogposts and recipes but after impletmenting the code from the [django documentation](https://docs.djangoproject.com/en/5.0/) but i could not get this to work for me just yet i will contu=inue in my efforts to perfect this.
 
 
 # Credits 
