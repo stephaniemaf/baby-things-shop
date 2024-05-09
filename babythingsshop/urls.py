@@ -22,7 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #add allauth urls
     path('accounts/',include("allauth.urls")), #urls for log in ,log out, reg ect
-    path('summernote/', include('django_summernote.urls')),
     path('',include("home.urls")), 
     path('products/',include("products.urls")),
     path('bag/', include('bag.urls')),
