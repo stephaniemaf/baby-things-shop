@@ -18,6 +18,7 @@ body {
 
 
 /* home page */
+
 .image-main-bg{
     position: relative;
     
@@ -48,13 +49,13 @@ body {
 }
 
 .shop-now-button {
-    background: black;
+    background: rgb(50, 2, 32);
     color: white;
     min-width: 260px;
 }
 
 .btn-black {
-    background: black;
+    background: rgb(50, 2, 32);
     color: white;
 }
 
@@ -75,7 +76,7 @@ body {
 }
 
 .text-black {
-    color: #000 !important;
+    color: rgb(50, 2, 32) !important;
 }
 
 .border-black {
@@ -93,13 +94,14 @@ body {
 }
 
 
+/*shopping bag*/
 
 .my-0 {
-    color: black;
+    color: rgb(50, 2, 32);
 }
 
 #bag {
-    color: black;
+    color: rgb(50, 2, 32)
 }
 
 a.hoover-cat > span.badge:hover {
@@ -130,52 +132,82 @@ a.hoover-cat > span.badge:hover {
     cursor: pointer;
 }
 
-
 .cart-header{
     padding-top: 50px;
 }
 
-.signup{
-    color: black;
-    font-weight: bold;
-    text-align: center;
+.img-thumbnail{
+    width: 100px;
+    height: auto;
 }
 
-.signup button{
-    background: rgb(23, 23, 23) !important;
-    color: #fff !important;
-}
-.signin{
-    color: black;
-    font-weight: bold;
-    text-align: center;
-}
-
-.signin-btn{
-    background: rgb(23, 23, 23) !important;
-    color: #fff !important;
-    text-align: center;
-}
-
-
-p{
-    color: #000;
-    font-weight: 500;
-    text-align: center;
-}
-
-h1{
-    color: #000;
-    font-weight: 200;
-    text-align: center;
-    padding-top: 80px;
-}
 /* footer */
 .dark-bg {
-    background-color: #12485f;
+    background-color: #202021;
+
+}
+.footer{
+text-align: center;
+padding: 10px;
+height: 4rem;
+width: 100%;
+position: fixed;
+bottom: 0;
 }
 
 
+/*allauth form styling*/
+.allauth-form-inner-content p {
+    margin-top: 1.5rem; /* mt-4 */
+    color: #6c757d; /* text-secondary */
+}
+
+.allauth-form-inner-content input {
+    border-color: #aab7c4;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    font-weight: 300;
+    color: peachpuff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #202021;
+    border: 1px solid #202021;
+    padding: .20rem .4rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+	color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+
+.allauth-form-inner-content a {
+	color: #e4690b; /* text-info */
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

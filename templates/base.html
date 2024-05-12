@@ -35,6 +35,7 @@
   </head>
 
   <body>
+
     <header class="container-fluid fixed-top">
       <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
@@ -105,22 +106,28 @@
           {% include 'includes/main-nav.html' %}
         </nav>
       </div>
+
+      
+    {% if messages %}
+    <div class="message-container">
+      <strong>Messages:</strong>
+      <ul>
+        {% for message in messages %}
+        <li>{{message}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
     </header>
     
-
     <div id="bag-modal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
         <p>Some text in the Modal..</p>
       </div>
-    
     </div>
 
-    {% if messages %}
-    <div class="message-container">
-
-    </div>
-    {%endif%}
 
     {% block page-header %}
     <!--header underneath main header on pages using extended template-->
@@ -135,5 +142,19 @@
     {% endblock %}
 
   </body>
+  <footer class="footer mt-auto py-3 dark-bg">
+    <p class="m-0 text-center text-white">Made by Stephanie </p>
+    <p class="m-0 text-center text-white">Follow me on: <a href="https://www.facebook.com/yourPage" target="_blank"><i class="fab fa-facebook-square ms-3" style="color: peachpuff;"></i></a>
+      <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square ms-3"style="color: peachpuff;"></i></a></p>
+
+</footer>
+  <script>
+      setTimeout(function () {
+          let messages = document.getElementById('msg');
+          let alert = new bootstrap.Alert(messages);
+          alert.close();
+      }, 2000);
+  </script>
+  
 
   </html>

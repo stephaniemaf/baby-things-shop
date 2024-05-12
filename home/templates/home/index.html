@@ -10,24 +10,29 @@
 {% endblock %}
 
 {% block content %}
-<div class="image-main-bg">
-    <div class="card-body">
-        <img src="{% static 'images/main-bg.jpg' %}" class="img-fluid" alt="Responsive image" style="width:100%">
-        <div class="overlay-home">
-            <h1 class="home-text display-4 logo-font text-black">
-                Baby weaning <br> collection <br> has landed
-            </h1>
-            {% if user.is_authenticated %}
-                <p>Welcome, {{ user.username }}!</p>
-  
-                {% endif %}
-            <div class="text-center my-5">
-                <h4>
-                    <a href="{% url 'products' %}"
-                    class="shop-now-button btn btn-lrg rounded-0 text-uppercase py-3">Shop now</a>
-                </h4>
+<div class="image-container-home">
+    <div class="image-main-bg">
+        <div class="card-body">
+            <img src="{% static 'images/main-bg.jpg' %}" class="img-fluid vh-100" alt="Responsive image" style="width:100%">
+            <div class="overlay-home">
+                <h1 class="home-text display-4 logo-font text-black">
+                    Baby weaning <br> collection <br> has landed
+                </h1>
+                {% if user.is_authenticated %}
+                    <p>Welcome, {{ user.username }}!</p>
+
+                    {% endif %}
+                <div class="text-center my-5">
+                    <h4>
+                        <a href="{% url 'products' %}"
+                        class="shop-now-button btn btn-lrg rounded-0 text-uppercase py-3">Shop now</a>
+                    </h4>
+                </div>
             </div>
+            
         </div>
     </div>
 </div>
+
+
 {% endblock %}
