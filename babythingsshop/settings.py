@@ -33,7 +33,7 @@ DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['baby-things-shop-5ef2702b155d.herokuapp.com','8000-stephaniema-babythingss-voz5g8viwo8.ws-eu111.gitpod.io', 'localhost']
+ALLOWED_HOSTS = ['baby-things-shop-5ef2702b155d.herokuapp.com','8000-stephaniema-babythingss-rf0eko30oh4.ws-eu111.gitpod.io', 'localhost']
 
 
 # Application definition

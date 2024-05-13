@@ -24,3 +24,8 @@ class ReviewForm(forms.ModelForm):
         widgets = {
             'body': forms.Textarea(attrs={'rows': 4, 'placeholder': 'Write your review here...'})
         }
+
+class ReviewUpdateForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        fields = ('body',)

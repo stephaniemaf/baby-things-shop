@@ -15,6 +15,28 @@ body {
     margin-bottom: 20px;
 }
 
+.container-message{
+    font-size: large;
+    font-weight: 500;
+    color: black;
+}
+
+.btn-edit {
+    width: 80px;
+    height: 20px;
+    line-height: 1;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    font-family: Playfair Display, sans-serif;
+    background-color: rgb(81, 78, 78);
+    color: white;
+    text-decoration: none;
+}
+
+.btn-edit:hover{
+    color: white;
+    background: #291526;
+}
 
 
 /* home page */
@@ -231,6 +253,14 @@ bottom: 0;
     .header-container {
         padding-top: 164px;
     }
+
+    .my-0 {
+        color: rgb(50, 2, 32);
+    }
+    
+    #bag {
+        color: rgb(50, 2, 32)
+    }
 }
 
 /* mobile devices */
@@ -239,6 +269,14 @@ bottom: 0;
         font-size: 3rem; /* adjust font size for mobile devices */
         padding-top: 80px;
         
+    }
+
+    .my-0 {
+        color: rgb(50, 2, 32);
+    }
+    
+    #bag {
+        color: rgb(50, 2, 32)
     }
 }
 

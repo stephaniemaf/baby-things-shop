@@ -108,16 +108,17 @@
       </div>
 
       
-    {% if messages %}
-    <div class="message-container">
-      <strong>Messages:</strong>
-      <ul>
-        {% for message in messages %}
-        <li>{{message}}</li>
-        {% endfor %}
-      </ul>
-    </div>
-    {% endif %}
+      <div class="container-message">
+        <div class="row">
+          <div class="col-md-8 offset-md-2 text-center">
+            {% for message in messages %}
+            <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+              {{ message | safe }}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
 
     </header>
     

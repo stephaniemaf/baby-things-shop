@@ -1,12 +1,14 @@
 from django.shortcuts import render, redirect,reverse,get_object_or_404
 from django.contrib import messages
 from django.views.generic import View
+from django.views.generic.edit import UpdateView, DeleteView
+from django.views.generic.edit import FormMixin
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from django.urls import reverse_lazy
 from .models import Product, Category, Review
-from .forms import ProductForm, ReviewForm
+from .forms import ProductForm, ReviewForm, ReviewUpdateForm
 from django.contrib.contenttypes.models import ContentType
 
 
@@ -62,7 +64,7 @@ def all_products(request):
 
     return render(request, 'products/products.html', context)
 
-
+@login_required
 def product_detail(request, product_id):
     """ A view to show individual product details """
 
@@ -80,7 +82,7 @@ def product_detail(request, product_id):
         review_form = ReviewForm(request.POST)
         if review_form.is_valid():
             review = review_form.save(commit=False)
-            review.name = request.user.username
+            review.user = request.user
             review.product = product
             review.save()
             return redirect('product_detail', product_id=product_id)
@@ -157,3 +159,16 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+@login_required
+def update_review(request, pk):
+    review = get_object_or_404(Review, pk=pk)
+    if request.method == 'POST':
+        form = ReviewUpdateForm(request.POST, instance=review)
+        if form.is_valid():
+            form.save()
+            # Redirect to a success page or product detail page
+            return redirect('product_detail', product_id=review.product.pk)
+    else:
+        form = ReviewUpdateForm(instance=review)
+    return render(request, 'products/update_review_form.html', {'form': form, 'review': review})
