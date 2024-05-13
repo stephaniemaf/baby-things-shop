@@ -76,6 +76,7 @@ def product_detail(request, product_id):
         'product': product,
         'reviews': reviews,
         'review_form': review_form,
+        'reviewed' : False
     }
 
     if request.method == 'POST':
@@ -85,10 +86,11 @@ def product_detail(request, product_id):
             review.user = request.user
             review.product = product
             review.save()
+            context['reviewed'] = True
             return redirect('product_detail', product_id=product_id)
         else:
             context['review_form'] = review_form
-            context['reviewed'] = True
+            
 
     return render(request, 'products/product_detail.html', context)
     

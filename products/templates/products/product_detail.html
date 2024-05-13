@@ -93,7 +93,7 @@
                 {% for review in reviews %}
                 <div class="reviews" style="padding: 10px;">
                     <p class="font-weight-bold">
-                        <strong>{{ review.user }}:</strong>
+                        <strong>{{ request.user }}:</strong>
                         <br>
                         <span class="date-style" class="text-muted">
                             <small>{{ review.pub_date }}</small>
@@ -119,8 +119,10 @@
                 </div>
                 {% else %}
                 {% if user.is_authenticated %}
+
                 <h3>Leave a review:</h3>
-                <p>Posting as: {{ user.username }}</p>
+                <p>Please be patient, your review must be approved first</p>
+                <p>Posting as: {{ request.user }}</p>
                 <form method="post" style="margin-top: 1.3em;">
                     {% csrf_token %}
                     {{ review_form.body.label_tag }}

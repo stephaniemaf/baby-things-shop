@@ -83,10 +83,41 @@ Fix:
 Expectation: I will again use the silicone bowl and i will click on the delete button i created and i expect the product to be deleted from my site.
 Fix:
 
+## Reviews
+on my site you are able to leave reviews under reviews there are two buttons edit and delete.
+Expectation: I expect to log in as a user and click on a product, at the bottom of the page there will be an option to see reviews and beside it and option to leave one. I go to the body box and type ny review i expect a message to pop up say your review is awaiting approval.
+
+Fix: currently no message pops up and i am yet to enable a fix for it.
+
+## Edit review buttom 
+Expectation: I click on edit buttom and am brought to a page where i see the review and can edit in a box and click an update buttom 
+Fix: This has worked and my review has been updated and i was redirected back to my review
+
+## Delete review buttom 
+Expectation: I click on delete buttom and am brought to a page where i see the review. I click a delete button after reading a warning+
+
+Fix: This has worked and my review has been deleted and i was redirected back to= the review/product page
+
+## Checkout
+I used the neutral weaning set for this test. I went into the product and clicked add to bag and was brought to my shopping bag. It displayed the product i was buying the subtotal the quantity of the product and above that it shows the delivery cost and the grand total. I then click on secure checkout and am brought to the order page. Here i have a prefilled order form and this is because i already ordered and selected the box for saving my information. I move on and enter my credit card informatin and hit enter. Then my order confirmation is shown and it says that an email has been sent witht the details .
+
+Bugs: There is a bug here and its Emails. While testing on development an email will be sent to the console which is fine however emails will not send to a real email addred while running on heroku i followed the tutorial for the boutiqe ado and used gmail for sending my emails and it will not send for me. In the future i would try differnt smpt providers i just did run out of time on this project to implement that feature.
+
+## Admin Edit/Delete product from the product page
+
+I added edit and delete buttons on the product for super users only. I clicked on edit for this test and was met with this error:
+
+![editprod](static/images/editprod.png)
+
+To fix this error i went back to the edit_product.html and noticed a spelling error in the url sp i fixed that and i am able to edit and delete products as admin.
 ## Facebook business page
 [Facbook](https://www.facebook.com/profile.php?id=61557082624595)
 ![fbbus](static/images/fbbus.png)
 ![fbbus1](static/images/fbbus1.png)
+
+## Moqups
+![moqup](static/images/moqup.png)
+![moqup2](static/images/moqup2.png)
 
 # Validator Testing
 
@@ -97,24 +128,16 @@ Code passed through validator with no issues
 ![val2](static/images/val2.png)
 
 # bugs
+Email not sending real emails,  while running on heroku i followed the tutorial for the boutiqe ado and used gmail for sending my emails and it will not send for me. In the future i would try differnt smpt providers i just did run out of time on this project to implement that feature.
 
-I wanted to implement the ability to edit and delete comments the user had made on the blogposts and recipes but after impletmenting the code from the [django documentation](https://docs.djangoproject.com/en/5.0/) but i could not get this to work for me just yet i will contu=inue in my efforts to perfect this.
+No approval message for reviews being left as a pop up, but to let the user know that there needs to be approval i have left a message in a p tag saying the review will need to be approved 
 
 
 # Credits 
 I took ideas for this project from the code institute walkthrough project Ado. 
 
 # Important links
-Link to my GitHup repository
+Link to my [GitHub Repository](https://github.com/stephaniemaf/baby-things-shop
+) 
 
-# log in information
-
-GIT log in: Stephaniemaf
-passoword: AvaAlex1@
-
-To get onto admin site 
-Name: admin
-Password: project5
-
-
-hosted on heroku
+Hosted on [Heroku](https://id.heroku.com/login)

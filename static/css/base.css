@@ -173,7 +173,7 @@ text-align: center;
 padding: 10px;
 height: 4rem;
 width: 100%;
-position: fixed;
+position: relative;
 bottom: 0;
 }
 

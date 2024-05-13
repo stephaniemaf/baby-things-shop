@@ -35,7 +35,6 @@ class Review(models.Model):
     product = models.ForeignKey(
         Product, on_delete=models.CASCADE, related_name='reviews',null=True, blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
-    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE, null=True, blank=True)
     name = models.CharField(max_length=80 ,null=True, blank=True)
     body = models.TextField()
     pub_date = models.DateTimeField(auto_now_add=True)

@@ -22,13 +22,10 @@ class CategoryAdmin(admin.ModelAdmin):
 class ReviewAdmin(admin.ModelAdmin):
 
     list_filter = ('approved', 'pub_date')
-    list_display = ('name','body', 'approved', 'pub_date','content_type')
+    list_display = ('user','body', 'approved', 'pub_date')
     search_fields = ('user','body')
     actions = ['approve_reviews']
 
-    def content_type(self, obj):
-        content_type.short_description = 'Content Type'
-    
     def approve_reviews(self, request, queryset):
         queryset.update(approved=True)
 
