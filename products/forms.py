@@ -29,3 +29,8 @@ class ReviewUpdateForm(forms.ModelForm):
     class Meta:
         model = Review
         fields = ('body',)
+
+class ReviewDeleteForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        fields = ('body',)

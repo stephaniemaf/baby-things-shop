@@ -93,7 +93,7 @@
                 {% for review in reviews %}
                 <div class="reviews" style="padding: 10px;">
                     <p class="font-weight-bold">
-                        <strong>{{ review.name }}:</strong>
+                        <strong>{{ review.user }}:</strong>
                         <br>
                         <span class="date-style" class="text-muted">
                             <small>{{ review.pub_date }}</small>
@@ -103,6 +103,7 @@
 
                     {% if user.is_authenticated and user == review.user %}
                     <a href="{% url 'update_review_form' pk=review.pk %}" class="btn btn-edit">Edit</a>
+                    <a href="{% url 'delete_review_form' pk=review.pk %}" class="btn btn-edit">Delete</a>
                     
                     {% endif %}
                 </div>

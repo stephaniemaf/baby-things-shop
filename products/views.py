@@ -8,7 +8,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 from django.urls import reverse_lazy
 from .models import Product, Category, Review
-from .forms import ProductForm, ReviewForm, ReviewUpdateForm
+from .forms import ProductForm, ReviewForm, ReviewUpdateForm, ReviewDeleteForm
 from django.contrib.contenttypes.models import ContentType
 
 
@@ -172,3 +172,16 @@ def update_review(request, pk):
     else:
         form = ReviewUpdateForm(instance=review)
     return render(request, 'products/update_review_form.html', {'form': form, 'review': review})
+
+@login_required
+def delete_review(request, pk):
+    review = get_object_or_404(Review, pk=pk)
+    if request.method == 'POST':
+        form = ReviewDeleteForm(request.POST, instance=review)
+        if form.is_valid():
+            review.delete()
+            messages.success(request, 'Your review has been deleted')
+            return redirect('product_detail', product_id=review.product.pk)
+    else:
+        form = ReviewDeleteForm(instance=review)
+    return render(request, 'products/delete_review_form.html', {'form': form, 'review': review})
