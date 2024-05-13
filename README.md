@@ -132,6 +132,8 @@ Email not sending real emails,  while running on heroku i followed the tutorial 
 
 No approval message for reviews being left as a pop up, but to let the user know that there needs to be approval i have left a message in a p tag saying the review will need to be approved 
 
+I have no email sign up form as of right now i have made the customer model so that i could have just a button users could click a button and they would be automatically subscribed with the information i saved from when they made an order i hope to implement this very soon 
+
 
 # Credits 
 I took ideas for this project from the code institute walkthrough project Ado. 
