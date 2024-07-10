@@ -3,6 +3,7 @@ from django.views.decorators.http import require_POST
 from django.urls import reverse_lazy
 from django.contrib import messages
 from django.views.generic.edit import FormView
+from django.core.mail import send_mail
 from django.conf import settings
 from .models import Order, OrderLineItem, Customer
 from products.models import Product
@@ -210,6 +211,20 @@ def checkout_success(request, order_number):
         if user_profile_form.is_valid():
             user_profile_form.save()
 
+    #send email after order
+    subject = f'Order Confirmation {order.order_number}'
+    message = f'Your order number us {order.order_number}, Thank you for shopping with us!!'
+    email_user = [order.email]
+
+    send_mail(
+        subject,
+        message,
+        settings.DEFAULT_FROM_EMAIL,
+        email_user,
+        fail_silently=False,
+    )
+
+    
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
