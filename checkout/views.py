@@ -5,16 +5,15 @@ from django.contrib import messages
 from django.views.generic.edit import FormView
 from django.core.mail import send_mail
 from django.conf import settings
+from bag.contexts import bag_contents
 from .models import Order, OrderLineItem, Customer
 from products.models import Product
-from profiles.models import Delivery
-from .forms import OrderForm, CustomerForm
+from profiles.models import Delivery, UserProfile
 from profiles.forms import UserProfileForm, DeliveryForm
-from profiles.models import UserProfile
-from bag.contexts import bag_contents
+from .forms import OrderForm, CustomerForm
+from datetime import datetime
 import stripe
 import json
-from datetime import datetime
 
 
 @require_POST
