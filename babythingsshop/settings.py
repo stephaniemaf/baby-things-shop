@@ -56,12 +56,14 @@ INSTALLED_APPS = [
     'products',
     'checkout',
     'profiles',
+    'newsletter',
+    'easy_thumbnails',
 
     #other
-    'crispy_forms',
-    
-    
+    'crispy_forms',  
 ]
+
+NEWSLETTER_THUMBNAIL = 'easy-thumbnails'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
