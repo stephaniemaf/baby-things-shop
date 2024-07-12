@@ -1,0 +1,20 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+
+{% block inner_content %}
+<h2 class="text-black">Baby Things Newsletter....</h2>
+<br>
+<h3 class="text-black">To Subscribe,<h4 class="text-black">Please enter your email address below.</h4></h3>
+<p class="text-black">Subscribe to be the first to be in the know when a new collection drops! Discount codes sent to subscribers only!!</p>
+<br>
+<form class="subscribe" id="subscribe_form" method="post" action="{% url 'newsletter' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  {% if redirect_field_value %}
+  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+  {% endif %}
+  <button type="submit">{% trans "Subscribe" %} &raquo;</button>
+</form>
+
+{% endblock %}
