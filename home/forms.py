@@ -1,6 +1,6 @@
 from django import forms
 from .models import Customer
-from newsletter.models import Newsletter
+from .models import Subscription
 
 class Sign_Up(forms.ModelForm):
     class Meta:
@@ -10,5 +10,5 @@ class Sign_Up(forms.ModelForm):
 
 class Subscribe_Newsletter(forms.ModelForm):
     class Meta:
-        model = Newsletter
-        fields = ['email',]
+        model = Subscription
+        fields = ['email']

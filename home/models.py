@@ -1,4 +1,6 @@
 from django.db import models
+from django.utils.translation import ugettext_lazy as _
+from newsletter_subscription.models import SubscriptionBase
 
 # Create your models here.
 class Customer(models.Model):
@@ -9,3 +11,6 @@ class Customer(models.Model):
     
     def __str__(self):
        return self.name
+
+class Subscription(SubscriptionBase):
+    email = models.EmailField(_('email address'), unique=True)

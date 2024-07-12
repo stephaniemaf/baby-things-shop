@@ -8,7 +8,7 @@
 <h3 class="text-black">To Subscribe,<h4 class="text-black">Please enter your email address below.</h4></h3>
 <p class="text-black">Subscribe to be the first to be in the know when a new collection drops! Discount codes sent to subscribers only!!</p>
 <br>
-<form class="subscribe" id="subscribe_form" method="post" action="{% url 'newsletter' %}">
+<form class="subscribe" id="subscribe_form" method="post" action="{% url 'subscribe_newsletter' %}">
   {% csrf_token %}
   {{ form.as_p }}
   {% if redirect_field_value %}
