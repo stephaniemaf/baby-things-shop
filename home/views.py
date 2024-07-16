@@ -45,8 +45,7 @@ def subscribe_newsletter(request):
                     messages.success(request, "Thank you for subscribing!")   
                     return redirect("subscribe_newsletter")
             except Exception as e:
-                error = messages.error(request, f"There has been an error: {str(e)}. Please try again later.")   
-                print(error)       
+                messages.error(request, "An error has occured while trying to subscribe, Please Try again later.")            
     else:
         form = Subscribe_Newsletter()
     return render(request, 'home/subscribe_newsletter.html', {'form': form})
