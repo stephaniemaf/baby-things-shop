@@ -36,7 +36,7 @@ class CustomerAdmin(admin.ModelAdmin):
         'phone_number',
         'email',
     )
-    earch_fields = ['name', 'phone_number', 'email']
+    search_fields = ['name', 'phone_number', 'email']
 
 admin.site.register(Customer, CustomerAdmin)
 admin.site.register(Order, OrderAdmin)
