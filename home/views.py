@@ -4,6 +4,7 @@ from django.contrib import messages
 from .forms import Sign_Up, Subscribe_Newsletter
 from .models import Customer
 from newsletter.models import Subscription, Newsletter
+from datetime import datetime
 
 def index(request):
     """ View to return index page """
@@ -32,15 +33,20 @@ def subscribe_newsletter(request):
     if request.method == 'POST':
         form = Subscribe_Newsletter(request.POST)
         if form.is_valid():
-            email = form.cleaned_data['email']
+            email_field = form.cleaned_data['email_field']
             try:
-                subscription = form.save(commit=False)
-                subscription.newsletter = Newsletter.objects.get(title='Welcome to Baby Things')
-                subscription.save()
-                messages.success(request, "Thank you for subscribing!")   
-                return redirect("subscribe_newsletter")
+                if Subscription.objects.filter(email_field=email_field).exists():
+                    messages.error(request,"This email has already been subscribed to our Newsletter")
+                else:
+                    subscription = form.save(commit=False)
+                    subscription.newsletter = Newsletter.objects.get(title='Welcome to Baby Things')
+                    subscription.subscribe_date = datetime.now()
+                    subscription.save()
+                    messages.success(request, "Thank you for subscribing!")   
+                    return redirect("subscribe_newsletter")
             except Exception as e:
-                messages.error(request, "There as been an error please try again later")          
+                error = messages.error(request, f"There has been an error: {str(e)}. Please try again later.")   
+                print(error)       
     else:
         form = Subscribe_Newsletter()
     return render(request, 'home/subscribe_newsletter.html', {'form': form})
