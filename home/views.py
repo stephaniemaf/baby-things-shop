@@ -1,11 +1,13 @@
+from django.utils import timezone
 from django.shortcuts import render, redirect, HttpResponse
+from django.template.loader import render_to_string
 from django.contrib.auth import authenticate, login
+from django.core.mail import send_mail
 from django.contrib import messages
+from django.conf import settings
 from .forms import Sign_Up, Subscribe_Newsletter
 from .models import Customer
 from newsletter.models import Subscription, Newsletter
-from datetime import datetime
-
 def index(request):
     """ View to return index page """
     return render(request, 'home/index.html')
@@ -40,11 +42,24 @@ def subscribe_newsletter(request):
                 else:
                     subscription = form.save(commit=False)
                     subscription.newsletter = Newsletter.objects.get(title='Welcome to Baby Things')
-                    subscription.subscribe_date = datetime.now()
+                    subscription.subscribe_date = timezone.now()
                     subscription.save()
-                    messages.success(request, "Thank you for subscribing!")   
+                    messages.success(request, "Thank you for subscribing!Check your inbox for a personal code for money off your first order")  
+
+                    subject = f'Welcome To Baby Things'
+                    message = render_to_string('home/welcome_email.txt')
+                    email_user = [subscription.email_field]
+
+                    send_mail(
+                        subject,
+                        message,
+                        settings.DEFAULT_FROM_EMAIL,
+                        email_user,
+                        fail_silently=False,
+                    )
                     return redirect("subscribe_newsletter")
             except Exception as e:
+                print (e)
                 messages.error(request, "An error has occured while trying to subscribe, Please Try again later.")            
     else:
         form = Subscribe_Newsletter()

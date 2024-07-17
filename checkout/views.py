@@ -212,7 +212,7 @@ def checkout_success(request, order_number):
 
     #send email after order
     subject = f'Order Confirmation {order.order_number}'
-    message = f'Your order number us {order.order_number}, Thank you for shopping with us!!'
+    message = f'Your order number is {order.order_number}, Thank you for shopping with us!!'
     email_user = [order.email]
 
     send_mail(
