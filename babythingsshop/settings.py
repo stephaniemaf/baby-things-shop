@@ -56,8 +56,9 @@ INSTALLED_APPS = [
     'products',
     'checkout',
     'profiles',
-    'newsletter',
     'easy_thumbnails',
+    'newsletter',
+    
 
     #other
     'crispy_forms',  
@@ -65,6 +66,15 @@ INSTALLED_APPS = [
 
 NEWSLETTER_THUMBNAIL = 'easy-thumbnails'
 NEWSLETTER_CONFIRM_EMAIL = False
+NEWSLETTER_EMAIL_DELAY = 60
+
+THUMBNAIL_ALIASES = {
+    '': {
+        'default': {'size': (200, 200), 'crop': True},
+    },
+}
+
+THUMBNAIL_DEBUG = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

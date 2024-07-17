@@ -41,7 +41,7 @@ def subscribe_newsletter(request):
                     messages.error(request,"This email has already been subscribed to our Newsletter")
                 else:
                     subscription = form.save(commit=False)
-                    subscription.newsletter = Newsletter.objects.get(title='Welcome to Baby Things')
+                    subscription.newsletter = Newsletter.objects.get(title='Welcome To Baby Things')
                     subscription.subscribe_date = timezone.now()
                     subscription.save()
                     messages.success(request, "Thank you for subscribing!Check your inbox for a personal code for money off your first order")  
