@@ -12,6 +12,7 @@ from .forms import ProductForm, ReviewForm, ReviewUpdateForm, ReviewDeleteForm
 from django.contrib.contenttypes.models import ContentType
 
 
+
 # Create your views here.
 
 def all_products(request):

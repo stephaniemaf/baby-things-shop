@@ -5,7 +5,6 @@ from . import views
 
 urlpatterns = [
     path('', views.shop_bag, name='shop_bag'),
-    path('add/<item_id>', views.add_to_bag, name='add_to_bag'),
-    path('remove/<item_id>/', views.remove_from_bag, name='remove_from_bag'),
-    path('adjust/<item_id>', views.adjust_bag, name='adjust_bag'),
+    path('add_and_remove/<item_id>', views.add_and_remove, name='add_and_remove'),
+    path('adjust/<int:item_id>/', views.adjust_bag, name='adjust_bag'),
     ]
