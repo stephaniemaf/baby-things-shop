@@ -45,7 +45,6 @@ def add_and_remove(request, item_id):
             return HttpResponse(status=500)
 
 def adjust_bag(request, item_id):
-    """ Add aproduct to the shopping bag """
 
     quantity = int(request.POST.get('quantity', 0))
     bag = request.session.get('bag', {})
@@ -53,7 +52,7 @@ def adjust_bag(request, item_id):
     if quantity > 0:
          bag[item_id] = quantity
     else:
-        bag.pop(item_id, None)
+        bag.pop(item.item_id, None)
 
     request.session['bag'] = bag
     return redirect(reverse('shop_bag'))
