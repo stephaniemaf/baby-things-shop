@@ -98,9 +98,14 @@
                             {% endfor %}
                         </tbody>
                         <div class="cart-sum-total text-center">
-                            <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
+                            <h6><strong>Sub Total: ${{ total|floatformat:2 }}</strong></h6>
+                            {% if discount_code %}
+                            <h6>Discount Applied: ${{ discount_amount|floatformat:2 }}</h6>
+                            {% else %}
+                            <h6>No discount code applied.</h6>
+                            {% endif %}
                             <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                            <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                            <h4 class="mt-4"><strong>Grand Total: ${{ total|calc_discount:discount_code|add:delivery|final_amount }}</strong></h4>
                         </div>
                         <hr>
                         <div class="cart-sum-buttons text-center">
@@ -149,14 +154,20 @@
     $('.remove-item').click(function (e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/bag/remove/${itemId}/`;
+        var url = `/bag/adjust/${itemId}/`;
         var data = {
-            'csrfmiddlewaretoken': csrfToken
+            'csrfmiddlewaretoken': csrfToken,
+            'quantity':0
         };
-
+        console.log('Removing item:', itemId); // Debugging line
+        console.log('URL:', url); // Debugging line
+        console.log('CSRF Token:', csrfToken); // Debugging line
         $.post(url, data)
-            .done(function () {
+            .done(function (response) {
                 location.reload();
+            })
+            .fail(function (xhr, status, error) {
+                console.error('AJAX request failed:', error); // Debugging line
             });
     })
 </script>

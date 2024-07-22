@@ -102,15 +102,10 @@ I will be manually testing my Baby Things Store for this Project!
 
 ## Home Page
  ### Navbar:   
- I tested each navigation button first by hoovering my mouse over it to see would my hoover function correctly work which i found it did! I then clicked each navigation button to be sure the links i created for the button would trigger a drop down menu.  
- I clicked on All Things. This immediatly threw an error at me. If i was logged out of the admin panel then i was unable to access the store entirely. The error was showing the pagenav.html as causing the error. I went threw the code and noticed it was a spelling error at the top pagenav header html page for the accounts.signup link, once i corrected this there was no issues for signing in and out of the store either logged in or out from the admin panel. I went back to the home page and tried the All Things link again This dropped a menu down containing all expected options for product pages.  
- I clicked on Clothing Things Things. This dropped a menu down containing all expected options for product pages.  
- I clicked on Dinner Things. This dropped a menu down containing all expected options for product pages.  
- I clicked on Specials Offers. This dropped a menu down containing all expected options for product pages.  
- I clicked on My Account. This dropped a menu down containing all expected options.  
- I clicked on the Shopping bag. This brought me to a knew page with the options to go back or continue to checkout. As i had no items in my bag to view thats all that was on the page and what i expected to see.  
- I clicked on the Search bar. I wanted to be able to type in this bar and have it find the product im looking for via product name or part there of, or via item heading. it did work and i was brought to the item page i was searching for.  
-
+* Hover Function:
+    * Expectation: Hover over nav links and have text size increase
+    * Result: Function worked as expected
+    * fix: None
  ### Middle Container:
  The container has a background image with text overlay. This is centered and stretched to fit the whole screen but have padding at the edges.
 I clicked on the shop now button contained on this page and under the text informing customers of New Arrivals. This brought me to a new page with all the lasted items added to the store contained in it. This test passed like i expected.

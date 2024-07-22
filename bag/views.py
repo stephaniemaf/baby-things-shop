@@ -45,14 +45,16 @@ def add_and_remove(request, item_id):
             return HttpResponse(status=500)
 
 def adjust_bag(request, item_id):
-
+    print(f"Adjusting bag for item_id: {item_id}")  # Debugging line
     quantity = int(request.POST.get('quantity', 0))
     bag = request.session.get('bag', {})
 
     if quantity > 0:
          bag[item_id] = quantity
     else:
-        bag.pop(item.item_id, None)
+        bag.pop(item_id, None)
 
     request.session['bag'] = bag
+    print(f"Updated bag: {bag}")  # Debugging line
     return redirect(reverse('shop_bag'))
+

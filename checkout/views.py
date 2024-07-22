@@ -12,6 +12,7 @@ from profiles.models import Delivery, UserProfile
 from profiles.forms import UserProfileForm, DeliveryForm
 from .forms import OrderForm, CustomerForm
 from datetime import datetime
+from decimal import Decimal
 import stripe
 import json
 
@@ -36,9 +37,13 @@ def cache_checkout_data(request):
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
+    free_delivery_threshold = Decimal(settings.FREE_DELIVERY_THRESHOLD)
+    standard_delivery_percentage = Decimal(settings.STANDARD_DELIVERY_PERCENTAGE)
 
     if request.method == 'POST':
         bag = request.session.get('bag', {})
+        discount_code = request.session.get('discount_code', '')
+       
 
         form_data = {
             'full_name': request.POST['full_name'],
@@ -143,8 +148,17 @@ def checkout(request):
             return redirect(reverse('products'))
 
         current_bag = bag_contents(request)
-        total = current_bag['grand_total']
-        stripe_total = round(total * 100)
+        subtotal = Decimal(current_bag['subtotal'])
+        discount_amount = Decimal(current_bag['discount_amount'])
+        delivery = Decimal('0.00')
+
+        if subtotal >= free_delivery_threshold:
+            delivery = 0
+        else:
+            delivery = round(subtotal * (standard_delivery_percentage / Decimal('100')), 2)
+
+        grand_total = subtotal - discount_amount + delivery
+        stripe_total = round(grand_total * 100)
         stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(
             amount=stripe_total,
