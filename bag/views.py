@@ -2,7 +2,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.contrib import messages
 from products.models import Product
-from django.http import JsonResponse
 from .forms import DiscountCodeForm
 from bag.contexts import bag_contents
 
@@ -48,7 +47,6 @@ def add_and_remove(request, item_id):
             return HttpResponse(status=500)
 
 def adjust_bag(request, item_id):
-    print(f"Adjusting bag for item_id: {item_id}")  # Debugging line
     quantity = int(request.POST.get('quantity', 0))
     bag = request.session.get('bag', {})
 
@@ -58,17 +56,15 @@ def adjust_bag(request, item_id):
         bag.pop(item_id, None)
 
     request.session['bag'] = bag
-    print(f"Updated bag: {bag}")  # Debugging line
     return redirect(reverse('shop_bag'))
 
 
 def empty_bag(request):
     if request.method == 'POST':
-        # Clear the cart by removing the 'bag' session data
         request.session['bag'] = {}
-        return redirect(reverse('shop_bag'))  # Redirect to the shopping bag page
+        return redirect(reverse('shop_bag')) 
     else:
-        return redirect(reverse('shop_bag'))  # Handle non-POST requests
+        return redirect(reverse('shop_bag')) 
 
 def apply_discount(request):
     if request.method == 'POST':
