@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/login/</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/subscribe_newsletter/</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/bag/</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/products/?sort=price&amp;direction=asc</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/products/?sort=category&amp;direction=asc</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/products/</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/products/?category=boys_0-6</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/products/?category=boys_6-12</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/products/?category=girls_0-6</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/products/?category=girls_6-12</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/products/?category=swimwear</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/products/?category=sleepsuits</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/products/?category=sleepbags</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/products/?category=boys_0-6,boys6-12,girls_0-6,girls_6-12,swimwear,sleepsuits,sleppbags</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/products/?category=weaning_sets</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/products/?category=plates,bowls</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/products/?category=cutlery</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/products/?category=bibs</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/products/?category=weaing_sets,plates,bowls,cutlrey,bibs</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/products/?category=new_arrivals</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/products/?category=deals</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/products/?category=clearence</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/products/?category=new_arrivals,deals</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/login/?next=/products/12/</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/login/?next=/products/13/</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/login/?next=/products/7/</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/login/?next=/products/14/</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/login/?next=/products/6/</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/products/?category=plates%20and%20bowls</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/login/?next=/products/3/</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/login/?next=/products/1/</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/login/?next=/products/8/</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/login/?next=/products/10/</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/login/?next=/products/9/</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/login/?next=/products/4/</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/login/?next=/products/11/</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/signup/?next=%2Fproducts%2F12%2F</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/signup/?next=%2Fproducts%2F13%2F</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/signup/?next=%2Fproducts%2F7%2F</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/signup/?next=%2Fproducts%2F14%2F</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/signup/?next=%2Fproducts%2F6%2F</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/signup/?next=%2Fproducts%2F3%2F</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/signup/?next=%2Fproducts%2F1%2F</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/signup/?next=%2Fproducts%2F8%2F</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/signup/?next=%2Fproducts%2F10%2F</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/signup/?next=%2Fproducts%2F9%2F</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/signup/?next=%2Fproducts%2F4%2F</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/signup/?next=%2Fproducts%2F11%2F</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/login/?next=%2Fproducts%2F12%2F</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/login/?next=%2Fproducts%2F13%2F</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/login/?next=%2Fproducts%2F7%2F</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/login/?next=%2Fproducts%2F14%2F</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/login/?next=%2Fproducts%2F6%2F</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/login/?next=%2Fproducts%2F3%2F</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/login/?next=%2Fproducts%2F1%2F</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/login/?next=%2Fproducts%2F8%2F</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/login/?next=%2Fproducts%2F10%2F</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/login/?next=%2Fproducts%2F9%2F</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/login/?next=%2Fproducts%2F4%2F</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://baby-things-shop-5ef2702b155d.herokuapp.com/accounts/login/?next=%2Fproducts%2F11%2F</loc>
+  <lastmod>2024-07-23T22:54:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+
+
+</urlset>
