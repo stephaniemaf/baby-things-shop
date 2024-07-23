@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_meta %}
+    <meta name="description" content="Create your own profile to save your information for faster checkout and delivery. View order history. Manage your Details.">
+    <meta name="Keywords" content="Profile, Checkout, Delivery, Save, Faster Checkout, Manage, Order History, Order summary">
+{% endblock %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">

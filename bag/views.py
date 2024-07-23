@@ -2,6 +2,8 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.contrib import messages
 from products.models import Product
+from .forms import DiscountCodeForm
+from bag.contexts import bag_contents
 
 def shop_bag(request):
     return render(request, 'bag/bag.html')
@@ -58,3 +60,13 @@ def adjust_bag(request, item_id):
     print(f"Updated bag: {bag}")  # Debugging line
     return redirect(reverse('shop_bag'))
 
+def apply_discount(request):
+    if request.method == 'POST':
+        form = DiscountCodeForm(request.POST)
+        if form.is_valid():
+            discount_code = form.cleaned_data['discount_code']
+            request.session['discount_code'] = discount_code
+            messages.success(request, "Discount code applied.")
+        else:
+            messages.error(request, "Invalid discount code.")
+        return redirect('shop_bag')

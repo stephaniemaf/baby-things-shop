@@ -2,6 +2,10 @@
 {% load static %}
 {% load bag_tools %}
 
+{% block extra_meta %}
+    <meta name="discription" content="View and mangage items before paying. Secure checkout. View order details after Purchase. Save details for faster checkout">
+    <meta name="Keywords" content="Shopping, Discount, Checkout, Cart, Order summary, Save Details, Card payment, Secure">
+{% endblock %}
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}

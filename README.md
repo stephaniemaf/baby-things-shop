@@ -105,8 +105,12 @@ I will be manually testing my Baby Things Store for this Project!
 * Hover Function:
     * Expectation: Hover over nav links and have text size increase
     * Result: Function worked as expected
-    * fix: None
+    * Fix: None
  ### Middle Container:
+ * Button Hover Function:
+    * Expectation: Hover over nav links and have background color change to grey
+    * Result: Function worked as expected
+    * Fix: None
  The container has a background image with text overlay. This is centered and stretched to fit the whole screen but have padding at the edges.
 I clicked on the shop now button contained on this page and under the text informing customers of New Arrivals. This brought me to a new page with all the lasted items added to the store contained in it. This test passed like i expected.
 
