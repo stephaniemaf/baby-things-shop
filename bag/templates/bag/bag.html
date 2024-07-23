@@ -91,9 +91,13 @@
                                             </div>
                                         </div>                                       
                                     </form>
-                                    <a class="update-link text-info"><small>Update</small></a>
-                                    <a class="remove-item text-danger float-right"
-                                    id="remove_{{ item.item_id }}"><small>Remove</small></a>
+                                    <a class="update-link text-info"><small>Update</small></a> 
+                                    <form action="{% url 'empty_bag' %}" method="post" style="display: inline;">
+                                        {% csrf_token %}
+                                        <button type="submit" class="remove-item float-right btn btn-danger btn-sm whitebg" id="empty-bag-button">
+                                            Empty Bag
+                                        </button>
+                                    </form>
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
@@ -164,26 +168,6 @@
     $('.update-link').click(function (e) {
         var form = $(this).prev('.update-form');
         form.submit();
-    })
-    // Remove item and reload on click
-    $('.remove-item').click(function (e) {
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/bag/adjust/${itemId}/`;
-        var data = {
-            'csrfmiddlewaretoken': csrfToken,
-            'quantity':0
-        };
-        console.log('Removing item:', itemId); // Debugging line
-        console.log('URL:', url); // Debugging line
-        console.log('CSRF Token:', csrfToken); // Debugging line
-        $.post(url, data)
-            .done(function (response) {
-                location.reload();
-            })
-            .fail(function (xhr, status, error) {
-                console.error('AJAX request failed:', error); // Debugging line
-            });
     })
 </script>
 {% endblock %}

@@ -28,13 +28,12 @@ def bag_contents(request):
         try:
             discount = Discount.objects.get(discount_code=discount_code, active=True, used=False)
             if discount.is_valid():
-                discount_amount = Decimal(discount.discount_amount)
-                # Apply percentage discount
-                if discount.discount_type == 'percentage':
-                    discount_amount = total * (discount_amount / 100.0)
+                discount_percentage = Decimal(discount.discount_amount)
+                discount_amount = total * (discount_percentage / 100)
                 total -= discount_amount
         except Discount.DoesNotExist:
-            pass  # Optionally handle invalid discount code
+       
+            pass
 
     # Calculate delivery cost
     free_delivery_threshold = Decimal(settings.FREE_DELIVERY_THRESHOLD)
