@@ -30,19 +30,20 @@ def bag_contents(request):
             if discount.is_valid():
                 discount_percentage = Decimal(discount.discount_amount)
                 discount_amount = total * (discount_percentage / 100)
-                total -= discount_amount
+            else:
+                messages.error(request, "Discount code is no longer valid.")
         except Discount.DoesNotExist:
-       
-            pass
+            messages.error("discount code does not exist")
 
-    # Calculate delivery cost
     free_delivery_threshold = Decimal(settings.FREE_DELIVERY_THRESHOLD)
     standard_delivery_percentage = Decimal(settings.STANDARD_DELIVERY_PERCENTAGE) / 100
     delivery = Decimal('0.00')
-    if total < free_delivery_threshold:
+    if total >= free_delivery_threshold:
+        delivery = Decimal('0.00')
+    else:
         delivery = total * standard_delivery_percentage
-
-    grand_total = total + delivery
+        
+    grand_total = total - discount_amount + delivery
 
     context = {
         'bag_items': bag_items,
@@ -52,7 +53,7 @@ def bag_contents(request):
         'delivery': delivery,
         'grand_total': grand_total,
         'discount_code': discount_code,
-        'discount_amount': discount_amount,  # Include discount amount if needed
+        'discount_amount': discount_amount,
     }
 
     return context

@@ -75,4 +75,4 @@ def apply_discount(request):
             messages.success(request, "Discount code applied.")
         else:
             messages.error(request, "Invalid discount code.")
-        return redirect('shop_bag')
+    return redirect('checkout')

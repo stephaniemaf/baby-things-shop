@@ -39,12 +39,10 @@ def checkout(request):
     stripe_secret_key = settings.STRIPE_SECRET_KEY
     free_delivery_threshold = Decimal(settings.FREE_DELIVERY_THRESHOLD)
     standard_delivery_percentage = Decimal(settings.STANDARD_DELIVERY_PERCENTAGE)
-
+    bag = request.session.get('bag', {})
+    discount_code = request.session.get('discount_code', '')
+    
     if request.method == 'POST':
-        bag = request.session.get('bag', {})
-        discount_code = request.session.get('discount_code', '')
-       
-
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -193,6 +191,11 @@ def checkout(request):
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
+        'subtotal': subtotal,
+        'discount_amount': discount_amount,
+        'delivery': delivery,
+        'grand_total': grand_total,
+
     }
 
     return render(request, template, context)

@@ -77,6 +77,18 @@
                         <p class="my-0"><strong>${{ grand_total | floatformat:2 }}</strong></p>
                     </div>
                 </div>
+                <div>
+                    <div class="text-right mt-4">
+                        <form method="POST" action="{% url 'apply_discount' %}">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="discount_code"><h6>Discount code</h6></label>
+                                <input type="text" class="form-control" id="discount_code" style="width:200px; display: inline-block;" name="discount_code" placeholder="discount code">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-sm" style="background-color: rgb(46, 83, 111);">Apply Discount</button>
+                        </form>
+                    </div>
+                </div>
             </div>
             <div class="col-12 col-lg-6">
                 <p class="text-muted">Please fill out the form below to complete your order</p>
