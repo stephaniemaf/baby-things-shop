@@ -203,7 +203,7 @@ def checkout(request):
 
 def checkout_success(request, order_number):
     """
-    Handle successful checkouts
+    Handle successful checkout
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
