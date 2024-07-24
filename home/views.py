@@ -8,6 +8,7 @@ from django.conf import settings
 from .forms import Sign_Up, Subscribe_Newsletter
 from .models import Customer
 from newsletter.models import Subscription, Newsletter
+
 def index(request):
     """ View to return index page """
     return render(request, 'home/index.html')
