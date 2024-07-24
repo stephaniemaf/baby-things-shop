@@ -65,12 +65,3 @@ def subscribe_newsletter(request):
         form = Subscribe_Newsletter()
     return render(request, 'home/subscribe_newsletter.html', {'form': form})
 
-def send_test_email(request):
-    subject = 'Test Email'
-    message = 'This is a test email sent from Django.'
-    email_from = os.environ.get('EMAIL_HOST_USER')
-    recipient_list = ['recipient@example.com']  # Replace with your email
-
-    send_mail(subject, message, email_from, recipient_list)
-
-    return HttpResponse('Test email sent successfully.')
