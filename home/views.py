@@ -45,7 +45,7 @@ def subscribe_newsletter(request):
                     subscription.newsletter = Newsletter.objects.get(title='Welcome To Baby Things')
                     subscription.subscribe_date = timezone.now()
                     subscription.save()
-                    messages.success(request, "Thank you for subscribing!Check your inbox for a personal code for money off your first order")  
+                    messages.success(request, "Thank you for subscribing! Check your inbox for a personal code for money off your first order")  
 
                     subject = f'Welcome To Baby Things'
                     message = render_to_string('home/welcome_email.txt')

@@ -15,10 +15,22 @@ body {
     margin-bottom: 20px;
 }
 
-.container-message{
-    font-size: large;
-    font-weight: 500;
+.alert{
+    background-color: #dfe76d;
     color: black;
+    padding: 20px;
+    margin: 15px 0;
+    width: auto;
+    width: 350px;
+    height: auto;
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
 }
 
 .btn-edit {
