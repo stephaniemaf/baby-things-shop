@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2em;
+            color: #333;
+        }
+        p {
+            font-size: 1.2em;
+            color: #666;
+        }
+        a {
+            color: #1e4774;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>404 Error</h1>
+        <p>Oooh no!! The page your looking for cant be found.</p>
+        <p><a href="{% url 'home' %}">Lets take you home!</a></p>
+    </div>
+</body>
+</html>
