@@ -309,19 +309,15 @@ bottom: 0;
 
 /* mobile devices */
 @media (max-width: 320px){
-    .display-4{
-        font-size: 3rem; /* adjust font size for mobile devices */
-        padding-top: 80px;
-        
+    .navbar-nav {
+        flex-direction: column; /* Stack items vertically if needed */
+        align-items: center; /* Center items horizontally */
     }
-
     .my-0 {
         color: rgb(50, 2, 32);
+        margin: 10px 0;
     }
-    
-    #bag {
-        color: rgb(50, 2, 32)
-    }
+   
 }
 
 
