@@ -24,15 +24,12 @@
         </div>
 
         <div class="row">
-            <div class="col-12 col-md-6">
-                <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
-                    <div class="text-right">
-                        <a class="btn btn-sm btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn btn-sm btn-black rounded-0" type="submit">Edit Product</button>
-                    </div>
+            <div class="col-12 col-md-6 mb-5">
+                <form method="POST" action="{% url 'edit_product' product.id %}" class="form-add mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
-                
+                    <a class="btn btn-sm btn-outline-black rounded-0 form-btn" href="{% url 'products' %}">Cancel</a>
+                    <button class="btn btn-sm btn-black rounded-0 form-btn" type="submit">Edit Product</button>
                 </form>
             </div>            
         </div>
