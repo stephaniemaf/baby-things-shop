@@ -3,8 +3,6 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 
-handler404 = 'home.views.custom_404_view'
-
 urlpatterns = [
     path('', views.shop_bag, name='shop_bag'),
     path('add_and_remove/<item_id>/', views.add_and_remove, name='add_and_remove'),
