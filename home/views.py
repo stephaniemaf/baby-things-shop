@@ -13,8 +13,6 @@ def index(request):
     """ View to return index page """
     return render(request, 'home/index.html')
 
-def custom_404(request, exception):
-    return render(request, '404.html', status=404)
     
 def sign_up(request):
     if request.method == 'POST':
