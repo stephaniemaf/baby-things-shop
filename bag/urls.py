@@ -9,6 +9,4 @@ urlpatterns = [
     path('adjust/<int:item_id>/', views.adjust_bag, name='adjust_bag'),
     path('bag/empty/', views.empty_bag, name='empty_bag'),
     path('apply_discount/', views.apply_discount, name='apply_discount'),
-    
-
     ]
