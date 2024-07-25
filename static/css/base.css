@@ -50,7 +50,6 @@ body {
     background: #291526;
 }
 
-
 /* home page */
 
 .image-main-bg{
@@ -201,6 +200,22 @@ position: fixed;
 bottom: 0;
 }
 
+/*add-product form styling*/
+
+.form-add {
+    margin-top: 0em;
+    display: block;
+}
+
+.container-add {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.form-btn {
+    margin-bottom: 10px;
+    float: left;
+}
 
 /*allauth form styling*/
 .allauth-form-inner-content p {

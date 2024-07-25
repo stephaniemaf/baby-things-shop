@@ -13,7 +13,7 @@
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 mb-5">
                 <hr>
                     <div class="cart-header">
                     <h3 class="logo-font mb-4">Product Management</h3>
@@ -24,13 +24,15 @@
         </div>
 
         <div class="row">
-            <div class="col-12 col-md-6">
-                <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+            <div class="col-12 col-md-6 mb-5">
+                <form method="POST" action="{% url 'add_product' %}" class="form-add mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-right">
-                        <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn btn-black rounded-0" type="submit">Add Product</button>
+                        <a class="btn btn-outline-black rounded-0 form-btn" href="{% url 'products' %}">Cancel</a>
+                        <button class="btn btn-black rounded-0 btn-sm form-btn" type="submit">
+                            Add Product
+                        </button>
                     </div>
                 </form>
             </div>            
