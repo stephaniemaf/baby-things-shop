@@ -112,20 +112,37 @@ I will be manually testing my Baby Things Store for this Project!
     * Result: Function worked as expected
     * Fix: None
  The container has a background image with text overlay. This is centered and stretched to fit the whole screen but have padding at the edges.
-I clicked on the shop now button contained on this page and under the text informing customers of New Arrivals. This brought me to a new page with all the lasted items added to the store contained in it. This test passed like i expected.
+I clicked on the shop now button contained on this page and under the text informing customers of New Arrivals. This brought me to a new page with all the items added to the store contained in it. This test passed like i expected.
+
+## Button Testing
+Expectation: i will click on every button that can be clicked and assure they are all working
+Result: All buttons work as expected
+Fix: Added Onclick action to delete button when logged in as admin to warn user that pressing the button will delete product.
 
 ### The Footer:
 Expectation = I expect the footer to have the words Made by stephanie and links to facebook and instagram. I want these links to lead to the home page of their respective sites.
 Result = I clicked on each link and am brought to the front page of their respective sites.
 
 ### Shopping Bag:
-Expectation: I expected this to bring me into a page with the content of the shopping bag. sign up form i clicked  theon the bag and was shown an attribute error saying that reuslt was as intended and i was indeed brought to the content i was expecting to see. 
+Expectation: I expected this to bring me into a page with the content of the shopping bag. i clicked on the bag. Iwas redirected to the shopping bag
+Fix: None
+
+### Secure Checkout:
+I used the neutral weaning set for this test. I went into the product and clicked add to bag and was brought to my shopping bag. It displayed the product i was buying the subtotal the quantity of the product and above that it shows the delivery cost and the grand total. I then click on secure checkout and am brought to the order page. Here i have a prefilled order form and this is because i already ordered and selected the box for saving my information. I move on and enter my credit card informatin and hit enter. Then my order confirmation is shown and it says that an email has been sent witht the details .
+Expectation: To be redirected to the checkout page where i can enter my delivery information and card number. I can see an order summary
+Result: As Expected
+Fix: None
+
+### Emails:
+Expectation: After subscribing to the newsletter/signing up/ Requesting new password and getting confirmation email on successful checkout. I expect to have an email sent to my email address
+Result: No email was sent.
+Fix: To begin fixing this i added debugging code in the form of print statements to the checkout-success view and turned debug to true i was indeed recieving emails to the console. But in production nothing was sending. I added more debugging code to check if my smtp settings where correct via sending an email with smpt in the console. This worked so i didnt some googling and on stack overflow someone mentioned python 12 removed the ability to send emails and threw a starttls() keyword error, which i was getting. so i added a runtime file and specified python 3.10.14 was to be run when deploying on heroku. I was able to recieve emails ateer this
 
 ## Product Testing
 
 ### View Product:
 Expectation: I will click on a Sleepbags in the Clothing things drop down menu to test this feature. I expected to be brought to the Sleeping bag item page. <br>
-I was brought To the oage with the image i had chosen to represent my sleepbags
+I was brought To the page with the image i had chosen to represent my sleepbags
 Fix: No fix needed as i was indeed brought to the correct page. I was shown the product image of a sleep bag and i had the option to add it to my cart or keep shopping.
 
 ### Add Product:
@@ -134,18 +151,23 @@ Fix: This test was successful
 
 ### Edit Product:
 Expectation: I will select the newly added silicone bowl and i will edit the price to 1.99
-Fix:
+Fix: none
 
 
 ### Delete Product:
 Expectation: I will again use the silicone bowl and i will click on the delete button i created and i expect the product to be deleted from my site.
-Fix:
+Fix: Added onclick function to warn user of immediate deletion
+
+### Remove From bag
+Expectation: Remove items from bag.
+Result: nothing happend
+Fix: Changed this buttons view to empty bag as update was allowing you to remove all items bar 1 with no way to empty the bag completly
 
 ## Reviews:
 on my site you are able to leave reviews under reviews there are two buttons edit and delete.
 Expectation: I expect to log in as a user and click on a product, at the bottom of the page there will be an option to see reviews and beside it and option to leave one. I go to the body box and type ny review i expect a message to pop up say your review is awaiting approval.
 
-Fix: currently no message pops up and i am yet to enable a fix for it.
+Fix: currently no message pops up and i am yet to enable a fix for it. I have left a message above the review box letting users know that there message must be approved
 
 ### Edit review button:
 Expectation: I click on edit buttom and am brought to a page where i see the review and can edit in a box and click an update buttom 
@@ -156,26 +178,36 @@ Expectation: I click on delete button and am brought to a page where i see the r
 
 Fix: This has worked and my review has been deleted and i was redirected back to the review/product page
 
-## Checkout:
-I used the neutral weaning set for this test. I went into the product and clicked add to bag and was brought to my shopping bag. It displayed the product i was buying the subtotal the quantity of the product and above that it shows the delivery cost and the grand total. I then click on secure checkout and am brought to the order page. Here i have a prefilled order form and this is because i already ordered and selected the box for saving my information. I move on and enter my credit card informatin and hit enter. Then my order confirmation is shown and it says that an email has been sent witht the details .
-
-Bugs: There is a bug here and its Emails. While testing on development an email will be sent to the console which is fine however emails will not send to a real email addred while running on heroku i followed the tutorial for the boutiqe ado and used gmail for sending my emails and it will not send for me. In the future i would try differnt smpt providers i just did run out of time on this project to implement that feature.
 
 ## Admin Edit/Delete product from the product page
 
-I added edit and delete buttons on the product for super users only. I clicked on edit for this test and was met with this error:
+I added edit and delete buttons on the product for super users only.
+Expectation: Admin can click edit on an item and change information regarding to image price ect. Admin can delte product entirely
+Result: as expected
+Fix: None
 
-![editprod](static/images/editprod.png)
+## Newsletter
 
-To fix this error i went back to the edit_product.html and noticed a spelling error in the url sp i fixed that and i am able to edit and delete products as admin.  
+Expectation: users can enter there email address and click subscribe. The will be told that they ahve subscribes or if there was an error
+Result: Users recieve a welcome email after succesful subscription
+
+## Discount
+
+Expectation: Users recieve a discount via email. They may only use it one time 
+Result: the first time users go there shopping bag they may enter the dicount code if they have one. The discount will apply and the total will be updated
+Bug: the next time users go to the bag sometimes the discount stays applied and they seem to be able to enter it again and be told it has been applied however it does not remove any more money from the total
+Fix: I have yet to fix this bug.
+ 
 ## Facebook business page  
 
-[Facbook](https://www.facebook.com/profile.php?id=61557082624595)
+[Facebook](https://www.facebook.com/profile.php?id=61557082624595)
 ![fbbus](static/images/fbbus.png)
 ![fbbus1](static/images/fbbus1.png)
 
-## Moqups  
+## Moqups / MindMap / Business Model
 
+![MindMap](static/images/mind_map.png)
+![Busmod](static/images/Business_model.jpeg)
 ![moqup](static/images/moqup.png)
 ![moqup2](static/images/moqup2.png)
 
