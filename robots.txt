@@ -2,3 +2,5 @@ User-agent: *
 Disallow: /accounts/
 Disallow: /bag/
 Disallow: /admin/
+Disallow: /subscribe_newsletter/
+Sitemap: https://baby-things-shop-5ef2702b155d.herokuapp.com/sitemap.xml
